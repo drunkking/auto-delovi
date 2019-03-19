@@ -75,6 +75,32 @@ public function set_korisnik($ime, $prezime, $slika, $datum_rodjenja, $korisnick
     $this->pol = $pol;
 }
 
+public function insert_korisnik(){
+
+    $insert_query = $this->prepare_query("INSERT INTO korisnik(
+        ime,
+        prezime,
+        slika,
+        datum_rodjenja,
+        korisnicko_ime,
+        email,
+        sifra,
+        pol)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+
+    $insert_query->bind_param("ssssssss",
+        $this->ime,
+        $this->prezime,
+        $this->slika,
+        $this->datum_rodjenja,
+        $this->korisnicko_ime,
+        $this->email,
+        $this->sifra,
+        $this->pol);
+
+    $insert_query->execute();
+}
+
 
 
 }

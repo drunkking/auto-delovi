@@ -14,7 +14,7 @@ CREATE TABLE proizvod (
     proizvodjac VARCHAR(60) NOT NULL,
     za_vozila VARCHAR(255) NOT NULL,
     slika VARCHAR(255),
-    cena FLOAT NOT NULL,
+    cena DOUBLE NOT NULL,
     sifra_kategorije INTEGER,
     PRIMARY KEY(sifra_proizvoda),
     FOREIGN KEY(sifra_kategorije) REFERENCES kategorija(sifra_kategorije)
