@@ -55,7 +55,6 @@ public function __construct(){
     $this->test_connection();
 }
 
-
 public function set_korisnik($ime, $prezime, $slika, $datum_rodjenja, $korisnicko_ime, $email, $sifra, $pol){
 
     $this->ime = $ime;
