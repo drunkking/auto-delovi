@@ -21,8 +21,8 @@
            Kategorije
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-            <a class="dropdown-item" href="#">Sve kategorije</a>
-            <a class="dropdown-item" href="#">Dodaj kategoriju</a>
+            <a class="dropdown-item" href="../kategorija/sve_kategorije.php">Sve kategorije</a>
+            <a class="dropdown-item" href="../kategorija/dodaj_kategoriju.php">Dodaj kategoriju</a>
         </div>
         </div>
       

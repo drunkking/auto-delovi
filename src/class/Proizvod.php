@@ -72,6 +72,21 @@ class Proizvod extends Database {
 
         $insert_query->execute();
     }
+
+
+    public function all_proizvod(){
+
+        $result = array();
+
+        $select_query = $this->set_query("SELECT * FROM proizvod");
+
+        while($row = $select_query->fetch_assoc()){
+            $result[] = $row;
+        }
+
+        return $result;
+        
+    }
 }
 
 

@@ -14,7 +14,8 @@ function table_proizvod() {
                 row += "<td>" + myObj[i]['sifra_proizvoda'] + "</td>";
                 row += "<td>" + myObj[i]['naziv'] + "</td>";
                 row += "<td>" + myObj[i]['proizvodjac'] + "</td>";
-                row += "<td>" + myObj[i]['slika'] + "</td>";
+                row += "<td>" + myObj[i]['za_vozila'] + "</td>";
+                row += "<td><img class='img-fluid' height='100px' width='130px'  src='./images/" + myObj[i]['slika'] + "'/>"+ "</td>";
                 row += "<td>" + myObj[i]['cena'] + "</td>";
                 row += "<td>" + myObj[i]['sifra_kategorije'] + "</td>";
                 row += "</tr>";
@@ -24,7 +25,7 @@ function table_proizvod() {
         }
     };
 
-    xmlhttp.open("POST", "", true);
+    xmlhttp.open("POST", "../../src/includes/vrati_sve_proizvode.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send();
 

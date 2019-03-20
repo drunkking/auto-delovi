@@ -1,13 +1,19 @@
 <?php require_once("../includes/data/header_nav.php"); ?>
 
-  <div class="d-flex" id="wrapper">
+<body onload="table_proizvod()">
+
+
+<!-- Navbar-->
+<?php require_once("../includes/data/navbar.php"); ?>
+
+  <div  class="d-flex" id="wrapper">
 
 
     <!-- Sidebar -->
     <?php require_once("../includes/data/sidebar.php"); ?>
 
     <!-- Page Content -->
-    <div onload="table_proizvod()" id="page-content-wrapper">
+    <div  id="page-content-wrapper">
 
         <div class="container-fluid">
         <div class="row justify-content-center">

@@ -1,5 +1,12 @@
 <?php require_once("../includes/data/header_nav.php"); ?>
 
+<body>
+
+
+<!-- Navbar-->
+<?php require_once("../includes/data/navbar.php"); ?>
+
+
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
