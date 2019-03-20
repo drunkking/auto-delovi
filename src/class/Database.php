@@ -1,84 +1,70 @@
 <?php require_once("IConnection.php"); ?>
-<?php require_once("../config/config.php"); ?>
+<?php require_once("../../config/config.php"); ?>
+
 
 
 <?php
-
 abstract class Database implements IConnection {
-
-  /**
-   * string
-   */
-  private $db_host;
-
-  /**
-   * string
-   */
-  private $db_user;
-
-  /**
-   * string
-   */
-  private $db_password;
-  
-  /**
-   * string
-   */
-  private $db_name;
-
-  /**
-   * mixed
-   */
-  protected $connection;
-
-  function __destruct(){
-
-    if($connection){
-        mysqli_close($connection);
-    }
-  }
-
-  public function connect_to_db(){
-
-    $this->connection = new mysqli($this->db_host, $this->db_user, $this->db_password, $this->db_name);
-  }
-
-  public function set_parameters($host, $user, $password, $name){
-
-    $this->db_host = $host;
-
-    $this->db_user = $user;
-
-    $this->db_password = $password;
-
-    $this->name = $name;
-  }
-
-  public function test_connection(){
-
-    if($this->connection->conenct_errno){
-        echo "DB CONNECT ERROR ".$conenction->connect_error;
-    }
-  }
-
-  public function get_connection(){
-
-    if(!isset($this->connection)){
-        echo "EMPTY CONNECTION";
+    /**
+     * string
+    */
+    private $db_host;
+    /**
+     * string
+    */
+    private $db_user;
+    /**
+     * string
+    */
+    private $db_password;
+    /**
+     * string
+    */
+    private $db_name;
+    /**
+     * mixed
+    */
+    protected $connection;
+    function __desturct(){
+        if($connection){
+            mysqli_colse($connection);
+        }
     }
 
-    return $this->conenction;
-  }
+    public function connect_to_db(){
+        $this->connection = new mysqli($this->db_host, $this->db_user, $this->db_password, $this->db_name);
+    }
 
-  public function prepare_query($query){
+    public function set_parameters($host, $user, $password, $name){
+        
+        $this->db_host = $host;
+        $this->db_user = $user;
+        $this->db_password = $password;
+        $this->db_name = $name;
+    }
 
-    return $this->get_connection()->prepare_query($query);
-  }
+    public function test_connection(){
+        
+        if($this->connection->connect_errno){
+            echo "DB CONNECT ERROR". $connection->connect_error;
+        }
+    }
 
-  public function set_query($query){
+    public function get_connection(){
+        if(!isset($this->connection)){
+            echo "EMPTY CONNECTION";
+        } 
+        return $this->connection;
+    }
 
-    return $this->get_connection()->query($query);
-  }
-}
+    public function prepare_query($query){
+        return $this->get_connection()->prepare($query);
+    }
 
+    public function set_query($query){
+    
+        return $this->get_connection()->query($query);
+    }
+ }
+ 
 ?>

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link href="../includes/css/sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="includes/css/sidebar.css" rel="stylesheet">
 
     <title>Dashboard</title>
   </head>
@@ -22,7 +22,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="../admin.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" href="admin.html">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">Features</a>
             <a class="nav-item nav-link" href="#">Pricing</a>
             </div>
@@ -44,8 +44,8 @@
         Proizvodi
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-            <a class="dropdown-item" href="svi_proizvodi.html">Svi proizvodi</a>
-            <a class="dropdown-item" href="dodaj_proizvod.html">Dodaj proizvod</a>
+            <a class="dropdown-item" href="proizvod/svi_proizvodi.php">Svi proizvodi</a>
+            <a class="dropdown-item" href="proizvod/dodaj_proizvod.php">Dodaj proizvod</a>
         </div>
         </div>
         
@@ -84,45 +84,9 @@
     <div id="page-content-wrapper">
 
         <div class="container-fluid">
-        <div class="row justify-content-center">
-                <div class="col-lg-5">
-                    <h1 class=" pt-4 text-center">Dodaj proizvod</h1>
-
-                    <form method="post">
-
-                        <div class="form-group">
-                            <h5>Naziv</h5>
-                            <input type="text" class="form-control" id="naziv_p">
-                        </div>
-
-                        <div class="form-group">
-                            <h5>Proizvođač</h5>
-                            <input type="text" class="form-control" id="proizvodjac_p">
-                        </div>
-
-                        <div class="from-group">
-                            <h5>Za vozila</h5>
-                            <input type="text" class="form-control" id="za_vozila_p">
-                        </div>
-
-                        <div class="from-group">
-                            <h5>Slika</h5>
-                            <input type="file" class="form-control-file" id="slika_p">
-                        </div>
-
-                        <div class="form-group">
-                            <h5>Cena</h5>
-                            <input type="number" class="form-control" id="cena_p" min="0">
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary" onclick="submit_proizvod();">Dodaj</button>
-                        </div>
-
-               
-
-
-                    </from>
+        <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="mt-4">Simple Sidebar</h1>
                     
                 </div>
             </div>
@@ -136,12 +100,10 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../bootstrap/jquery-3.3.1.slim.min.js"></script>
-    <script src="../bootstrap/popper.min.js" ></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/popper.min.js" ></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Submit script-->
-    <script src="js/submit_proizvod.js"></script>
 
     <!-- open menu  on resize-->
       <script>

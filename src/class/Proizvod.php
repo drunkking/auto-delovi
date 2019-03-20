@@ -63,7 +63,7 @@ class Proizvod extends Database {
             cena)
             VALUES (?, ?, ?, ?, ?)");
 
-        $insert_query->bind_param("ssssd",
+        $insert_query->bind_param("sssss",
             $this->naziv,
             $this->proizvodjac,
             $this->za_vozila,
