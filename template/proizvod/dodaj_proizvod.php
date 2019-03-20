@@ -66,6 +66,8 @@
   </div>
   <!-- wrapper -->
 
+      <script src="js/sub_proizvod.js"></script>
+
   <?php require_once("../includes/data/footer.php"); ?>
 
 

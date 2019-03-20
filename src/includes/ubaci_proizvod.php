@@ -6,12 +6,9 @@
 header("Content-Type: application/json; charset=UTF-8");
 
 
-
 if(!empty($_POST["proizvod"])){
 
-
     $obj_proizvod = json_decode($_POST["proizvod"], false);
-
 
     $prozvod = new Proizvod();
     $prozvod->set_proizvod(
@@ -30,11 +27,5 @@ if(!empty($_POST["proizvod"])){
 
     echo json_encode($obj_proizvod);
 }
-
-
-
-
-
-
 
 ?>

@@ -4,8 +4,7 @@
     <script src="../bootstrap/popper.min.js" ></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Submit script-->
-    <script src="js/sub_proizvod.js"></script>
+
 
     <!-- open menu  on resize-->
       <script>

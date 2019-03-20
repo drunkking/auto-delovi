@@ -10,12 +10,12 @@ class Kategorija extends Database {
      */
     private $naziv;
 
-    public function __consturct(){
+    public function __construct(){
 
         $this->set_parameters(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-
+    
         $this->connect_to_db();
-
+    
         $this->test_connection();
     }
 
@@ -26,14 +26,27 @@ class Kategorija extends Database {
 
     public function insert_kategorija(){
 
-        $insert_query = $this->prepare_query("INSERT INTO kategorija(
-            naziv)
+        $insert_query = $this->prepare_query("INSERT INTO kategorija(naziv)
             VALUES (?)");
         
         $insert_query->bind_param("s",
             $this->naziv);
         
         $insert_query->execute();
+    }
+
+
+    public function all_kategorija(){
+
+        $result = array();
+
+        $select_query = $this->set_query("SELECT * FROM kategorija");
+
+        while($row = $select_query->fetch_assoc()){
+            $result[] = $row;
+        }
+
+        return $result;
     }
 }
 
