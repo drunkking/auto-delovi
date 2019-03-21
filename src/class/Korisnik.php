@@ -101,6 +101,20 @@ public function insert_korisnik(){
 }
 
 
+public function all_korisnik(){
+
+    $result = array();
+
+    $select_query = $this->set_query("SELECT * FROM korisnik");
+
+    while($row = $select_query->fetch_assoc()){
+        $result[] = $row;
+    }
+
+    return $result;
+}
+
+
 
 }
 

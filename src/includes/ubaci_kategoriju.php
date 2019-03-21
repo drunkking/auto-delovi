@@ -11,9 +11,11 @@ if(!empty($_POST["kategorija"])){
     $obj_kategorija = json_decode($_POST["kategorija"], false);
 
     $kategorija = new Kategorija();
+
     $kategorija->set_kategorija(
         $obj_kategorija->naziv
     );
+    
     $kategorija->insert_kategorija();
 
     echo json_encode($obj_kategorija);

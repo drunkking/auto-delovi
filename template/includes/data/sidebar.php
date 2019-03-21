@@ -32,8 +32,8 @@
            Korisnici
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-            <a class="dropdown-item" href="#">Svi korisnici</a>
-            <a class="dropdown-item" href="#">Dodaj korisnika</a>
+            <a class="dropdown-item" href="../korisnik/svi_korisnici.php">Svi korisnici</a>
+            <a class="dropdown-item" href="../korisnik/dodaj_korisnika.php">Dodaj korisnika</a>
         </div>
         </div>
 
