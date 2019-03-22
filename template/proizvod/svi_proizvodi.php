@@ -30,6 +30,8 @@
                           <th>Slika</th>
                           <th>Cena</th>
                           <th>Kategorija</th>
+                          <th>Izmeni</th>
+                          <th>Obriši</th>
                         </tr>
                       </thead>
                       <tbody id="tb_p">
@@ -48,4 +50,5 @@
   <!-- wrapper -->
 
    <script src="js/load_proizvod.js"></script>
+   <script src="js/update_proizvod.js"></script>
   <?php require_once("../includes/data/footer.php"); ?>

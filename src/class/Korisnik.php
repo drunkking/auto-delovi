@@ -111,7 +111,7 @@ public function all_korisnik(){
         $result[] = $row;
     }
 
-    return $result;
+    return $result; 
 }
 
 

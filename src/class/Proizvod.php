@@ -87,6 +87,40 @@ class Proizvod extends Database {
         return $result;
         
     }
+
+    public function update_proizvod_id($sifra, $naziv, $proizvodjac, $za_vozila, $slika, $cena){
+
+        $update_query = $this->prepare_query("UPDATE proizvod SET
+                                                $naziv = (?),
+                                                $proizvodjac = (?),
+                                                $za_vozila = (?),
+                                                $slika = (?),
+                                                $cena = (?)
+                                                WHERE sifra_proizvoda = $sifra");
+        
+        $update_query->bind_param("sssssi", $naziv, $proizvodjac, $za_vozila, $slika, $cena, $sifra);
+
+        $update_query->execute();
+    }
+
+    public function return_proizvod_id($sifra){
+
+        $select_query = $this->set_query("SELECT naziv,
+                                                 proizvodjac,
+                                                 za_vozila,
+                                                 slika,
+                                                 cena
+                                            FROM proizvod
+                                            WHERE sifra_proizvoda = $sifra");
+
+        while($row = $select_query->fetch_assoc()){
+            $result = $row;
+        }
+
+        return $result;
+    }
+
+
 }
 
 
