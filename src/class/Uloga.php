@@ -34,6 +34,30 @@ class Uloga extends Database {
 
         $insert_qurey->execute();
     }
+
+    public function all_uloga(){
+
+        $result = array();
+
+        $select_query = $this->set_query("SELECT * FROM uloga");
+
+        while($row = $select_query->fetch_assoc()){
+            $result[] = $row;
+        }
+
+        return $result;
+    }
+
+    public function delete_uloga_id($sifra){
+
+        $delete_query = $this->prepare_query("DELETE
+            FROM uloga
+            WHERE sifra_uloge = (?)");
+        
+        $delete_query->bind_param("i", $sifra);
+
+        $delete_query->execute();
+    }
 }
 
 

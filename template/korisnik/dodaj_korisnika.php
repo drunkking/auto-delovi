@@ -66,7 +66,13 @@
                             </select>
                         </div>
 
-                    
+                        <div class="form-group" id="kat">
+                            <h5>Uloga</h5>
+                            <select class="form-control"  id="pol_k">
+                                <option value="admin">Admin</option>
+                                <option value="korisnik">Korisnik</option>
+                            </select>
+                        </div>  
 
                         <div class="form-group">
                             <button type="submit" name="submit" class="btn btn-primary" onclick="submit_korisnik();">Dodaj</button>

@@ -37,6 +37,19 @@
         </div>
         </div>
 
+
+        <!-- Uloge-->
+        <div class="dropdown">
+        <a class="list-group-item list-group-item-action bg-light "  id="dropdownMenu"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Uloge
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <a class="dropdown-item" href="../uloga/sve_uloge.php">Sve uloge</a>
+            <a class="dropdown-item" href="../uloga/dodaj_ulogu.php">Dodaj ulogu</a>
+        </div>
+        </div>
+
+
         <!-- Profil-->
         <a href="#" class="list-group-item list-group-item-action bg-light">Profil</a>
 
