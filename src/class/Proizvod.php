@@ -88,17 +88,22 @@ class Proizvod extends Database {
         
     }
 
-    public function update_proizvod_id($sifra, $naziv, $proizvodjac, $za_vozila, $slika, $cena){
+    public function update_proizvod_id($sifra){
 
         $update_query = $this->prepare_query("UPDATE proizvod SET
-                                                $naziv = (?),
-                                                $proizvodjac = (?),
-                                                $za_vozila = (?),
-                                                $slika = (?),
-                                                $cena = (?)
+                                                naziv = (?),
+                                                proizvodjac = (?),
+                                                za_vozila = (?),
+                                                slika = (?),
+                                                cena = (?)
                                                 WHERE sifra_proizvoda = $sifra");
         
-        $update_query->bind_param("sssssi", $naziv, $proizvodjac, $za_vozila, $slika, $cena, $sifra);
+        $update_query->bind_param("sssss", 
+                                $this->naziv, 
+                                $this->proizvodjac, 
+                                $this->za_vozila, 
+                                $this->slika, 
+                                $this->cena);
 
         $update_query->execute();
     }

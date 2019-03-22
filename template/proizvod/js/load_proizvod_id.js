@@ -25,7 +25,6 @@ function load_p(sifra){
 
             document.getElementById("za_vozila_p").value = myObj.za_vozila;
 
-           
             document.getElementById("tmp_slika").src = "images/" + myObj.slika;
 
             document.getElementById("cena_p").value = myObj.cena;
