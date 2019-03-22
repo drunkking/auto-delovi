@@ -22,9 +22,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="admin.html">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
+            <a class="nav-item nav-link active" href="admin.php">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Username</a>
+            <a class="nav-item nav-link" href="#">Odjavi se</a>
             </div>
         </div>
     </nav>
@@ -33,8 +33,8 @@
   <div class="d-flex" id="wrapper">
 
 
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="list-group">
 
     
@@ -56,8 +56,8 @@
            Kategorije
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-            <a class="dropdown-item" href="#">Sve kategorije</a>
-            <a class="dropdown-item" href="#">Dodaj kategoriju</a>
+            <a class="dropdown-item" href="kategorija/sve_kategorije.php">Sve kategorije</a>
+            <a class="dropdown-item" href="kategorija/dodaj_kategoriju.php">Dodaj kategoriju</a>
         </div>
         </div>
       
@@ -67,8 +67,8 @@
            Korisnici
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-            <a class="dropdown-item" href="#">Svi korisnici</a>
-            <a class="dropdown-item" href="#">Dodaj korisnika</a>
+            <a class="dropdown-item" href="korisnik/svi_korisnici.php">Svi korisnici</a>
+            <a class="dropdown-item" href="korisnik/dodaj_korisnika.php">Dodaj korisnika</a>
         </div>
         </div>
 

@@ -22,9 +22,9 @@
                     <h1 class=" pt-4 text-center">Izmeni proizvod</h1>
 
                     <form method="POST" enctype="multipart/form-data" >
-
+                    
                         <div class="form-group">
-                            <h5>Naziv</h5>
+                            <h5>Naziv</h5> 
                             <input type="text" class="form-control" id="naziv_p">
                         </div>
 
@@ -36,7 +36,7 @@
 
                         <div class="from-group">
                             <h5>Za vozila</h5>
-                            <input type="text" class="form-control" id="za_vozila_p">
+                            <textarea type="text" class="form-control" id="za_vozila_p"></textarea>
                         </div>
 
                         <div class="from-group">

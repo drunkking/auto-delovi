@@ -24,27 +24,27 @@
                     <form method="POST" enctype="multipart/form-data" >
 
                         <div class="form-group">
-                            <h5>Naziv</h5>
-                            <input type="text" class="form-control" id="naziv_p">
+                            <br>
+                            <input type="text" class="form-control" id="naziv_p"  placeholder="Naziv">
                         </div>
 
                         <div class="form-group">
-                            <h5>Proizvođač</h5>
-                            <input type="text" class="form-control" id="proizvodjac_p">
+                            <br>
+                            <input type="text" class="form-control" id="proizvodjac_p" placeholder="Proizvođač">
                         </div>
 
 
                         <div class="from-group">
-                            <h5>Za vozila</h5>
-                            <input type="text" class="form-control" id="za_vozila_p">
+                            <br>
+                            <textarea type="text" class="form-control" id="za_vozila_p" placeholder="Za vozila"></textarea>
                         </div>
 
                         <div class="from-group">
-                            <h5>Slika</h5>
+                            <br>
                             <input type="file" class="form-control-file" name="slika_p" id="slika_p">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" id="kat">
                             <h5>Kategorija</h5>
                             <select class="form-control" id="kategorija">  
                             </select>
@@ -52,8 +52,8 @@
                     
 
                         <div class="form-group">
-                            <h5>Cena</h5>
-                            <input type="number" class="form-control" id="cena_p" min="0">
+                            <br>
+                            <input type="number" class="form-control" id="cena_p" min="0" placeholder="Cena">
                         </div>
 
                         <div class="form-group">

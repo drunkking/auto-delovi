@@ -24,8 +24,8 @@
                     <form method="POST" enctype="multipart/form-data" >
                         
                         <div class="form-group">
-                            <h5>Naziv</h5>
-                            <input type="text" class="form-control" id="naziv_k">
+                            <br>
+                            <input type="text" class="form-control" id="naziv_k" placeholder="Naziv">
                         </div>
                
 

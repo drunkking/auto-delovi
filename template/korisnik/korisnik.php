@@ -25,7 +25,7 @@
 
                         <div class="form-group">
                             <h5>Ime</h5>
-                            <input type="text" class="form-control" id="ime_k">
+                            <input type="text" class="form-control" id="ime_k" >
                         </div>
 
                         <div class="form-group">

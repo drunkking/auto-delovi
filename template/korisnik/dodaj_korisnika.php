@@ -24,41 +24,41 @@
                     <form method="POST" enctype="multipart/form-data" >
 
                         <div class="form-group">
-                            <h5>Ime</h5>
-                            <input type="text" class="form-control" id="ime_k">
+                            <br>
+                            <input type="text" class="form-control" id="ime_k" placeholder="Ime">
                         </div>
 
                         <div class="form-group">
-                            <h5>Prezime</h5>
-                            <input type="text" class="form-control" id="prezime_k">
+                            <br>
+                            <input type="text" class="form-control" id="prezime_k" placeholder="Prezime">
                         </div>
 
                         <div class="form-group">
-                            <h5>Slika</h5>
+                            <br>
                             <input type="file" class="form-control-file" name="slika_k" id="slika_k">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" id="kat">
                             <h5>Datum rodjenja</h5>
-                            <input type="date" class="form-control" id="datum_rodj_k">
+                            <input type="date" class="form-control" id="datum_rodj_k" placeholder="Datum rodjenja">
                         </div>
 
                         <div class="form-group">
-                            <h5>Korisničko ime</h5>
-                            <input type="text" class="form-control" id="korisnicko_k">
+                            <br>
+                            <input type="text" class="form-control" id="korisnicko_k" placeholder="Korisničko ime">
                         </div>
 
                         <div class="form-group">
-                            <h5>Email</h5>
-                            <input type="email" class="form-control" id="adresa_k">
+                            <br>
+                            <input type="email" class="form-control" id="adresa_k" placeholder="Email">
                         </div>
 
                         <div class="form-group">
-                            <h5>Šifra</h5>
-                            <input type="password" class="form-control" id="sifra_k">
+                            <br>
+                            <input type="password" class="form-control" id="sifra_k" placeholder="Šifra">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" id="kat">
                             <h5>Pol</h5>
                             <input type="text" class="form-control" id="pol_k">
                         </div>
