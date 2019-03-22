@@ -9,11 +9,10 @@ function up_proizvod(sifra){
     var za_vozila = document.getElementById("za_vozila_p").value;
  
     var slika = document.getElementById("slika_p").files[0].name; 
-    
+
     var cena = document.getElementById("cena_p").value;
 
-
-   
+    
 
     var proizvod_obj = {
         "sifra": sifra_p,

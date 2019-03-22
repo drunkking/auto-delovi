@@ -19,7 +19,7 @@
         <div class="row justify-content-center">
 
                 <div class="col-lg-5">
-                    <h1 class=" pt-4 text-center">Izemni proizvod</h1>
+                    <h1 class=" pt-4 text-center">Izmeni proizvod</h1>
 
                     <form method="POST" enctype="multipart/form-data" >
 

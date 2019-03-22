@@ -1,10 +1,18 @@
-function table_proizvod() {
+function del_proizvod(sifra){
 
-    var xmlhttp = new XMLHttpRequest();
+    var sifra_p = sifra;
+
+    var proizvod_obj = {
+        "sifra": sifra_p
+    };
+
+    xmlhttp = new XMLHttpRequest();
+    proizvod_obj_json = JSON.stringify(proizvod_obj);
+
 
     xmlhttp.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
-
+        if (this.readyState == 4 && this.status == 200) {
+            
             var myObj = JSON.parse(this.responseText);
             var row = "";
 
@@ -27,8 +35,9 @@ function table_proizvod() {
         }
     };
 
-    xmlhttp.open("POST", "../../src/includes/vrati_sve_proizvode.php", true);
+
+    xmlhttp.open("POST","../../src/includes/obrisi_proizvod.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send();
+    xmlhttp.send("proizvod="+proizvod_obj_json);
 
 }
