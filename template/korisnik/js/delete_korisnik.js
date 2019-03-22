@@ -18,6 +18,8 @@ function del_korisnik(sifra){
 
             for(var i = 0; i < myObj.length; i++){
 
+                console.log(korisnik_obj);
+
                 row += "<tr>";
                 row += "<td>" + myObj[i]['sifra_korisnika'] + "</td>";
                 row += "<td>" + myObj[i]['ime'] + "</td>";

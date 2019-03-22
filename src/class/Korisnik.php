@@ -115,6 +115,55 @@ public function all_korisnik(){
 }
 
 
+public function update_korisnik_id($sifra){
+
+    $update_query = $this->prepare_query("UPDATE korisnik SET
+        ime = (?),
+        prezime = (?),
+        slika = (?),
+        datum_rodjenja = (?),
+        korisnicko_ime = (?),
+        email = (?),
+        sifra = (?),
+        pol = (?)
+        WHERE sifra_korisnika = $sifra");
+
+    $update_query->bind_param("ssssssss",
+        $this->ime,
+        $this->prezime,
+        $this->slika,
+        $this->datum_rodjenja,
+        $this->korisnicko_ime,
+        $this->email,
+        $this->sifra,
+        $this->pol);
+
+    $update_query->execute();
+}
+
+
+public function return_korisnik_id($sifra){
+
+
+    $select_query = $this->set_query("SELECT ime,
+        prezime,
+        slika,
+        datum_rodjenja,
+        korisnicko_ime,
+        email,
+        sifra,
+        pol
+        FROM korisnik 
+        WHERE sifra_korisnika = $sifra");
+
+    while($row = $select_query->fetch_assoc()){
+        $result = $row;
+    }
+
+    return $result;
+}
+
+
 public function delete_korisnik_id($sifra){
 
     $delete_query = $this->prepare_query("DELETE
