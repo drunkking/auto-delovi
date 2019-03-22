@@ -17,7 +17,7 @@
 
         <div class="container-fluid">
         <div class="row justify-content-center">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     <h1 class="pt-4 text-center">Sve kategorije</h1>
 
                     <table class="table table-hover text-center">
@@ -25,6 +25,8 @@
                         <tr>
                           <th>Šifra</th>
                           <th>Naziv</th>
+                          <th>Izmeni</th>
+                          <th>Obriši</th>
                         </tr>
                       </thead>
                       <tbody id="tb_k">

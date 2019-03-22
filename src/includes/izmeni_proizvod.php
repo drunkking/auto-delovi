@@ -15,7 +15,8 @@ if(!empty($_POST["proizvod"])){
         $obj_proizvod->proizvodjac,
         $obj_proizvod->za_vozila,
         $obj_proizvod->slika,
-        $obj_proizvod->cena
+        $obj_proizvod->cena,
+        $obj_proizvod->sifra_kategorije
     );
     $proizvod->update_proizvod_id($obj_proizvod->sifra);
 

@@ -7,10 +7,16 @@ function up_proizvod(sifra){
     var proizvodjac = document.getElementById("proizvodjac_p").value;
 
     var za_vozila = document.getElementById("za_vozila_p").value;
- 
-    var slika = document.getElementById("slika_p").files[0].name; 
-
+  
     var cena = document.getElementById("cena_p").value;
+
+    var slika = document.getElementById("help_slika").innerText;
+
+    if(document.getElementById("slika_p").value != ""){
+        slika = document.getElementById("slika_p").files[0].name;
+    }
+
+    var sif_kategorije = document.getElementById("kategorija").value;
 
     
 
@@ -20,7 +26,8 @@ function up_proizvod(sifra){
         "proizvodjac": proizvodjac,
         "slika": slika,
         "za_vozila": za_vozila,
-        "cena": cena
+        "cena": cena,
+        "sifra_kategorije": sif_kategorije
     };
 
 
@@ -33,9 +40,7 @@ function up_proizvod(sifra){
     xmlhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
 
-            while(1){
             console.log(this.responseText);
-            }
         }
     };
     

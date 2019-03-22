@@ -11,13 +11,16 @@ function submit_proizvod(){
 
     var cena = document.getElementById("cena_p").value;
 
+    var sif_kategorije = document.getElementById("kategorija").value;
+
 
     var proizvod_obj = {
         "naziv": naziv,
         "proizvodjac": proizvodjac,
         "slika": slika,
         "za_vozila": za_vozila,
-        "cena": cena
+        "cena": cena,
+        "sifra_kategorije": sif_kategorije
     };
 
    

@@ -1,6 +1,6 @@
 <?php require_once("../includes/data/header_nav.php"); ?>
 
-<body onload="load_p(<?php echo $_GET['data']; ?>)">
+<body onload="load_p(<?php echo $_GET['data']; ?>);lo_kategorije();">
 
 
 <!-- Navbar-->
@@ -41,9 +41,17 @@
 
                         <div class="from-group">
                             <h5>Slika</h5>
-                            <img id="tmp_slika" height="200px" widht="300px" src=""></img>
+                            <img id="tmp_slika" height="200px" widht="300px" src="">
+                            <div id="help_slika"></div>
                             <input type="file" class="form-control-file" name="slika_p" id="slika_p">
                         </div>
+
+                        <div class="form-group">
+                            <h5>Kategorija</h5>
+                            <select class="form-control" id="kategorija">  
+                            </select>
+                        </div>
+                    
                     
 
                         <div class="form-group">
@@ -69,6 +77,7 @@
 
       <script src="js/load_proizvod_id.js"></script>
       <script src="js/update_proizvod.js"></script>
+      <script src="js/load_kategorije.js"></script>
 
   <?php require_once("../includes/data/footer.php"); ?>
 
@@ -76,7 +85,7 @@
 <!-- file upload -->
   <?php
   
-   if(isset($_POST['submit'])){
+   if(isset($_POST['submit']) && !empty($_FILES['slika_p'])){
 
     $slika_file = $_FILES['slika_p']['name'];
     $slika_file_tmp = $_FILES['slika_p']['tmp_name'];

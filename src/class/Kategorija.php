@@ -48,6 +48,20 @@ class Kategorija extends Database {
 
         return $result;
     }
+
+
+    public function return_kategorija_id($sifra){
+
+        $select_query = $this->set_query("SELECT naziv
+            FROM kategorija
+            WHERE sifra_kategorije = $sifra");
+
+        while($row = $select_query->fetch_assoc()){
+            $result = $row;
+        }
+
+        return $result;
+    }
 }
 
 

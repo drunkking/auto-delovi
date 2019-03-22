@@ -6,8 +6,6 @@ function up_korisnik(sifra){
 
     var prezime = document.getElementById("prezime_k").value;
 
-    var slika = document.getElementById("slika_k").files[0].name;
-
     var datum_rodjenja = document.getElementById("datum_rodj_k").value;
 
     var korisnicko_ime = document.getElementById("korisnicko_k").value;
@@ -18,8 +16,13 @@ function up_korisnik(sifra){
 
     var pol = document.getElementById("pol_k").value;
 
+    var slika = document.getElementById("help_slika").innerText;
 
+    if(document.getElementById("slika_k").value != "") {
+        slika = document.getElementById("slika_k").files[0].name;
+    }
 
+  
     var korisnik_obj = {
         "sifra_k": sifra_k,
         "ime": ime,
@@ -39,9 +42,11 @@ function up_korisnik(sifra){
 
     xmlhttp.onreadystatechante = function(){
         if(this.readyState == 4 && this.status == 200){
+   
 
-            console.log(this.responseTest);
             
+            console.log(this.responseTest);
+        
         }
     };
 
@@ -49,3 +54,6 @@ function up_korisnik(sifra){
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("korisnik="+korisnik_obj_json);
 }
+
+
+console.log(document.getElementById("help_slika").innerText);

@@ -29,6 +29,11 @@ class Proizvod extends Database {
      */
     private $cena;
 
+    /**
+     * int
+     */
+    private $sifra_kategorije;
+
     
     public function __construct(){
 
@@ -39,7 +44,7 @@ class Proizvod extends Database {
         $this->test_connection();
     }
 
-    public function set_proizvod($naziv, $proizvodjac, $za_vozila, $slika, $cena){
+    public function set_proizvod($naziv, $proizvodjac, $za_vozila, $slika, $cena, $sifra_kategorije){
 
         $this->naziv = $naziv;
 
@@ -50,6 +55,8 @@ class Proizvod extends Database {
         $this->slika = $slika;
 
         $this->cena = $cena;
+
+        $this->sifra_kategorije = $sifra_kategorije;
     }
 
 
@@ -60,15 +67,17 @@ class Proizvod extends Database {
             proizvodjac,
             za_vozila,
             slika,
-            cena)
-            VALUES (?, ?, ?, ?, ?)");
+            cena,
+            sifra_kategorije)
+            VALUES (?, ?, ?, ?, ?, ?)");
 
-        $insert_query->bind_param("sssss",
+        $insert_query->bind_param("sssssi",
             $this->naziv,
             $this->proizvodjac,
             $this->za_vozila,
             $this->slika,
-            $this->cena);
+            $this->cena,
+            $this->sifra_kategorije);
 
         $insert_query->execute();
     }
@@ -95,15 +104,17 @@ class Proizvod extends Database {
             proizvodjac = (?),
             za_vozila = (?),
             slika = (?),
-            cena = (?)
+            cena = (?),
+            sifra_kategorije = (?)
             WHERE sifra_proizvoda = $sifra");
 
-        $update_query->bind_param("sssss", 
+        $update_query->bind_param("sssssi", 
             $this->naziv, 
             $this->proizvodjac, 
             $this->za_vozila, 
             $this->slika, 
-            $this->cena);
+            $this->cena,
+            $this->sifra_kategorije);
 
         $update_query->execute();
     }

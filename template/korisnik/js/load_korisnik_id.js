@@ -20,6 +20,8 @@ function load_k(sifra){
 
             document.getElementById("tmp_slika").src = "images/" + myObj.slika;
 
+            document.getElementById("help_slika").innerText = myObj.slika;
+
             document.getElementById("datum_rodj_k").value = myObj.datum_rodjenja;
 
             document.getElementById("korisnicko_k").value = myObj.korisnicko_ime;

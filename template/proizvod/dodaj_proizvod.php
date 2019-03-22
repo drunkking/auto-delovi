@@ -1,6 +1,6 @@
 <?php require_once("../includes/data/header_nav.php"); ?>
 
-<body>
+<body onload="lo_kategorije()">
 
 
 <!-- Navbar-->
@@ -43,6 +43,12 @@
                             <h5>Slika</h5>
                             <input type="file" class="form-control-file" name="slika_p" id="slika_p">
                         </div>
+
+                        <div class="form-group">
+                            <h5>Kategorija</h5>
+                            <select class="form-control" id="kategorija">  
+                            </select>
+                        </div>
                     
 
                         <div class="form-group">
@@ -67,6 +73,7 @@
   <!-- wrapper -->
 
       <script src="js/sub_proizvod.js"></script>
+      <script src="js/load_kategorije.js"></script>
 
   <?php require_once("../includes/data/footer.php"); ?>
 

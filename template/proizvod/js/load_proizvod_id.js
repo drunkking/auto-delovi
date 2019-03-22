@@ -13,11 +13,9 @@ function load_p(sifra){
     xmlhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             
-          //  console.log(this.responseText);
             
             var myObj = JSON.parse(this.responseText);
 
-           // console.log(myObj);
 
             document.getElementById("naziv_p").value = myObj.naziv;
             
@@ -26,6 +24,8 @@ function load_p(sifra){
             document.getElementById("za_vozila_p").value = myObj.za_vozila;
 
             document.getElementById("tmp_slika").src = "images/" + myObj.slika;
+
+            document.getElementById("help_slika").innerText = myObj.slika;
 
             document.getElementById("cena_p").value = myObj.cena;
             

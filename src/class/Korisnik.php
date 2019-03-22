@@ -138,6 +138,8 @@ public function update_korisnik_id($sifra){
         $this->sifra,
         $this->pol);
 
+
+
     $update_query->execute();
 }
 

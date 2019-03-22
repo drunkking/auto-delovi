@@ -35,7 +35,8 @@
 
                         <div class="form-group">
                             <h5>Slika</h5>
-                            <img id="tmp_slika" height="200px" widht="300px" src=""></img>
+                            <img id="tmp_slika" height="200px" widht="300px" src="" name="">
+                            <div id="help_slika"></div>
                             <input type="file" class="form-control-file" name="slika_k" id="slika_k">
                         </div>
 
@@ -90,12 +91,15 @@
 
 <!-- file upload -->
   <?php
-  
-   if(isset($_POST['submit'])){
+     if(isset($_POST['submit']) && !empty($_FILES['slika_k'])){
 
-    $slika_file = $_FILES['slika_k']['name'];
-    $slika_file_tmp = $_FILES['slika_k']['tmp_name'];
+   
 
-    move_uploaded_file($slika_file_tmp, "images/$slika_file");
-   }  
+        $slika_file = $_FILES['slika_k']['name'];
+        $slika_file_tmp = $_FILES['slika_k']['tmp_name'];
+    
+        move_uploaded_file($slika_file_tmp, "images/$slika_file");
+        
+       }  
+
   ?>
