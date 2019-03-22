@@ -25,7 +25,6 @@
                         <tr>
                           <th>Šifra</th>
                           <th>Naziv</th>
-                          <th>Izmeni</th>
                           <th>Obriši</th>
                         </tr>
                       </thead>
@@ -45,4 +44,5 @@
   <!-- wrapper -->
 
    <script src="js/load_kategorija.js"></script>
+   <script src="js/delete_kategorija.js"></script>
   <?php require_once("../includes/data/footer.php"); ?>

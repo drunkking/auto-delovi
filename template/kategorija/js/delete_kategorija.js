@@ -1,7 +1,14 @@
-function table_kategorija(){
+function del_kategorija(sifra){
 
+    var sifra_k = sifra;
 
-    var xmlhttp = new XMLHttpRequest();
+    var  kategorija_obj = {
+        "sifra": sifra_k
+    };
+
+    xmlhttp = new XMLHttpRequest();
+    kategorija_obj_json = JSON.stringify(kategorija_obj);
+
 
     xmlhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
@@ -21,7 +28,10 @@ function table_kategorija(){
             document.getElementById("tb_k").innerHTML = row;
         }
     };
-    xmlhttp.open("POST", "../../src/includes/vrati_sve_kategorije.php", true);
+
+
+    xmlhttp.open("POST", "../../src/includes/obrisi_kategoriju.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send();
+    xmlhttp.send("kategorija="+kategorija_obj_json);
+
 }

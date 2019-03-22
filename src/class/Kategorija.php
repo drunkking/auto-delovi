@@ -50,6 +50,7 @@ class Kategorija extends Database {
     }
 
 
+
     public function return_kategorija_id($sifra){
 
         $select_query = $this->set_query("SELECT naziv
@@ -61,6 +62,18 @@ class Kategorija extends Database {
         }
 
         return $result;
+    }
+
+
+    public function delete_kategorija_id($sifra){
+
+        $delete_query = $this->prepare_query("DELETE
+            FROM kategorija
+            WHERE sifra_kategorije = (?)");
+
+        $delete_query->bind_param("i", $sifra);
+
+        $delete_query->execute();
     }
 }
 
