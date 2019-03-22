@@ -115,6 +115,18 @@ public function all_korisnik(){
 }
 
 
+public function delete_korisnik_id($sifra){
+
+    $delete_query = $this->prepare_query("DELETE
+        FROM korisnik
+        WHERE sifra_korisnika = (?)");
+
+    $delete_query->bind_param("i", $sifra);
+
+    $delete_query->execute();
+}
+
+
 
 }
 

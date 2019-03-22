@@ -1,6 +1,14 @@
-function table_korisnik(){
 
-    var xmlhttp = new XMLHttpRequest();
+function del_korisnik(sifra){
+
+    var sifra_k = sifra;
+
+    var korisnik_obj = {
+        "sifra": sifra_k
+    };
+
+    xmlhttp = new XMLHttpRequest();
+    korisnik_obj_json = JSON.stringify(korisnik_obj);
 
     xmlhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
@@ -29,7 +37,11 @@ function table_korisnik(){
         }
     };
 
-    xmlhttp.open("POST","../../src/includes/vrati_sve_korisnike.php", true);
+
+    xmlhttp.open("POST","../../src/includes/obrisi_korisnika.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send();
+    xmlhttp.send("korisnik="+korisnik_obj_json);
+
+
+
 }

@@ -32,6 +32,8 @@
                           <th>Email</th>
                           <th>Šifra</th>
                           <th>Pol</th>
+                          <th>Izmeni</th>
+                          <th>Obriši</th>
                         </tr>
                       </thead>
                       <tbody id="tb_k">
@@ -50,4 +52,5 @@
   <!-- wrapper -->
 
    <script src="js/load_korisnik.js"></script>
+   <script src="js/delete_korisnik.js"></script>
   <?php require_once("../includes/data/footer.php"); ?>
