@@ -60,7 +60,10 @@
 
                         <div class="form-group" id="kat">
                             <h5>Pol</h5>
-                            <input type="text" class="form-control" id="pol_k">
+                            <select class="form-control"  id="pol_k">
+                                <option value="Muško">Muško</option>
+                                <option value="Žensko">Žensko</option>
+                            </select>
                         </div>
 
                     
