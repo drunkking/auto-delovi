@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link href="includes/css/sidebar.css" rel="stylesheet">
+    <link href="includes/css/all.css" rel="stylesheet">
+
+  
 
     <title>Dashboard</title>
   </head>
@@ -37,11 +40,11 @@
   <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="list-group">
 
-    
+      
         <!-- Proizvodi-->
         <div class="dropdown">
-        <a class="list-group-item list-group-item-action bg-light"  id="dropdownMenu"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Proizvodi
+        <a class="list-group-item list-group-item-action bg-light "  id="dropdownMenu"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-dolly-flatbed"></i> Proizvodi
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
             <a class="dropdown-item" href="proizvod/svi_proizvodi.php">Svi proizvodi</a>
@@ -49,11 +52,11 @@
         </div>
         </div>
         
-
+        
         <!--Kategorije-->
         <div class="dropdown">
         <a class="list-group-item list-group-item-action bg-light "  id="dropdownMenu"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Kategorije
+             <i class="fas fa-project-diagram"></i> Kategorije
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
             <a class="dropdown-item" href="kategorija/sve_kategorije.php">Sve kategorije</a>
@@ -64,7 +67,7 @@
         <!-- Korisnici-->
         <div class="dropdown">
         <a class="list-group-item list-group-item-action bg-light "  id="dropdownMenu"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Korisnici
+        <i class="fas fa-users"></i> Korisnici
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
             <a class="dropdown-item" href="korisnik/svi_korisnici.php">Svi korisnici</a>
@@ -72,10 +75,30 @@
         </div>
         </div>
 
+
+        <!-- Uloge-->
+        <div class="dropdown">
+        
+        <a class="list-group-item list-group-item-action bg-light"  id="dropdownMenu"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-user-shield"></i> Uloge 
+        </a>
+        
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                <a class="dropdown-item" href="uloga/sve_uloge.php">Sve uloge</a>
+                <a class="dropdown-item" href="uloga/dodaj_ulogu.php">Dodaj ulogu</a> 
+            </div>
+        </div>
+
+
         <!-- Profil-->
-        <a href="#" class="list-group-item list-group-item-action bg-light">Profil</a>
-
-
+        <div class="dropdown">
+        <a class="list-group-item list-group-item-action bg-light" href="#" id="dropdownMenu"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-address-card"></i> Profil
+        
+        </a>
+        
+        </div>
+        
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -87,7 +110,6 @@
         <div class="row">
                 <div class="col-lg-12">
                     <h1 class="mt-4">Admin strana</h1>
-                    
                 </div>
             </div>
         </div>

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link href="../includes/css/sidebar.css" rel="stylesheet">
     <link href="../includes/css/stil.css" rel="stylesheet">
+    <link href="../includes/css/all.css" rel="stylesheet">
+  
 
     <title>Dashboard</title>
   </head>
