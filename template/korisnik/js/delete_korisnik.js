@@ -16,9 +16,9 @@ function del_korisnik(sifra){
             var myObj = JSON.parse(this.responseText);
             var row = "";
 
-            for(var i = 0; i < myObj.length; i++){
+            console.log(korisnik_obj_json);
 
-                console.log(korisnik_obj);
+            for(var i = 0; i < myObj.length; i++){
 
                 row += "<tr>";
                 row += "<td>" + myObj[i]['sifra_korisnika'] + "</td>";
@@ -30,6 +30,7 @@ function del_korisnik(sifra){
                 row += "<td>" + myObj[i]['email'] + "</td>";
                 row += "<td>" + myObj[i]['sifra'] + "</td>";
                 row += "<td>" + myObj[i]['pol'] + "</td>";
+                row += "<td>" + myObj[i]['sifra_uloge'] + "</td>";
                 row += "<td>" + "<a href='korisnik.php?data="+ myObj[i]['sifra_korisnika'] +"'><button type='button' class='btn btn-warning'>Izmeni</button>" + "</a></td>";
                 row += "<td>" + "<button type='button' class='btn btn-danger' onclick='del_korisnik("+ myObj[i]['sifra_korisnika'] +")' >Obriši</button>" + "</td>";
                 row += "</tr>";

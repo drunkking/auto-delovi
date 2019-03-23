@@ -1,5 +1,6 @@
 <?php require_once("../class/Korisnik.php"); ?>
 
+
 <?php
 
 header("Content-Type: application/json; charset=UTF-8");
@@ -11,6 +12,7 @@ if(!empty($_POST["korisnik"])){
 
     $korsink = new Korisnik();
 
+    
     $korsink->set_korisnik(
         $obj_korisnik->ime,
         $obj_korisnik->prezime,
@@ -19,7 +21,8 @@ if(!empty($_POST["korisnik"])){
         $obj_korisnik->korisnicko_ime,
         $obj_korisnik->email,
         $obj_korisnik->sifra,
-        $obj_korisnik->pol
+        $obj_korisnik->pol,
+        $obj_korisnik->sifra_uloge
     );
 
     $korsink->insert_korisnik();

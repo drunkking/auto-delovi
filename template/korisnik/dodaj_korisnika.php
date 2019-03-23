@@ -1,6 +1,6 @@
 <?php require_once("../includes/data/header_nav.php"); ?>
 
-<body>
+<body onload="lo_uloge();">
 
 
 <!-- Navbar-->
@@ -68,10 +68,7 @@
 
                         <div class="form-group" id="kat">
                             <h5>Uloga</h5>
-                            <select class="form-control"  id="pol_k">
-                                <option value="admin">Admin</option>
-                                <option value="korisnik">Korisnik</option>
-                            </select>
+                            <select class="form-control"  id="uloga_k"></select>
                         </div>  
 
                         <div class="form-group">
@@ -91,6 +88,7 @@
   <!-- wrapper -->
 
       <script src="js/sub_korisnik.js"></script>
+      <script src="js/load_uloge.js"></script>
 
   <?php require_once("../includes/data/footer.php"); ?>
 
@@ -98,7 +96,7 @@
 <!-- file upload -->
   <?php
   
-   if(isset($_POST['submit'])){
+   if(isset($_POST['submit']) && !empty($_FILES['slika_p'])){
 
     $slika_file = $_FILES['slika_k']['name'];
     $slika_file_tmp = $_FILES['slika_k']['tmp_name'];

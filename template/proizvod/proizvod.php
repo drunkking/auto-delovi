@@ -79,6 +79,7 @@
       <script src="js/update_proizvod.js"></script>
       <script src="js/load_kategorije.js"></script>
 
+
   <?php require_once("../includes/data/footer.php"); ?>
 
 

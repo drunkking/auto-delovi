@@ -17,6 +17,9 @@ function submit_korisnik(){
 
     var pol = document.getElementById("pol_k").value;
 
+    var uloga =  parseInt(document.getElementById("uloga_k").value,10);
+
+
 
 
     var korisnik_obj = {
@@ -27,19 +30,22 @@ function submit_korisnik(){
         "korisnicko_ime": korisnicko_ime,
         "email": email,
         "sifra": sifra,
-        "pol": pol
+        "pol": pol,
+        "sifra_uloge": uloga
     };
 
-    
+
+
+
 
     xmlhttp = new XMLHttpRequest();
     korisnik_obj_json = JSON.stringify(korisnik_obj);
 
     xmlhttp.onreadystatechante = function(){
         if(this.readyState == 4 && this.status == 200){
-
+           
             console.log(this.responseTest);
-            
+                
         }
     };
 

@@ -32,6 +32,7 @@
                           <th>Email</th>
                           <th>Šifra</th>
                           <th>Pol</th>
+                          <th>Uloga</th>
                           <th>Izmeni</th>
                           <th>Obriši</th>
                         </tr>

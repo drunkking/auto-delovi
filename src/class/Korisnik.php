@@ -45,6 +45,11 @@ private $sifra;
 */
 private $pol;
 
+/**
+ * int
+ */
+private $sifra_uloge;
+
 
 public function __construct(){
 
@@ -55,7 +60,7 @@ public function __construct(){
     $this->test_connection();
 }
 
-public function set_korisnik($ime, $prezime, $slika, $datum_rodjenja, $korisnicko_ime, $email, $sifra, $pol){
+public function set_korisnik($ime, $prezime, $slika, $datum_rodjenja, $korisnicko_ime, $email, $sifra, $pol, $sifra_uloge){
 
     $this->ime = $ime;
 
@@ -72,6 +77,8 @@ public function set_korisnik($ime, $prezime, $slika, $datum_rodjenja, $korisnick
     $this->sifra = $sifra;
 
     $this->pol = $pol;
+
+    $this->sifra_uloge = $sifra_uloge;
 }
 
 public function insert_korisnik(){
@@ -84,10 +91,11 @@ public function insert_korisnik(){
         korisnicko_ime,
         email,
         sifra,
-        pol)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        pol,
+        sifra_uloge)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-    $insert_query->bind_param("ssssssss",
+    $insert_query->bind_param("ssssssssi",
         $this->ime,
         $this->prezime,
         $this->slika,
@@ -95,7 +103,8 @@ public function insert_korisnik(){
         $this->korisnicko_ime,
         $this->email,
         $this->sifra,
-        $this->pol);
+        $this->pol,
+        $this->sifra_uloge);
 
     $insert_query->execute();
 }
@@ -125,10 +134,11 @@ public function update_korisnik_id($sifra){
         korisnicko_ime = (?),
         email = (?),
         sifra = (?),
-        pol = (?)
+        pol = (?),
+        sifra_uloge = (?) 
         WHERE sifra_korisnika = $sifra");
 
-    $update_query->bind_param("ssssssss",
+    $update_query->bind_param("ssssssssi",
         $this->ime,
         $this->prezime,
         $this->slika,
@@ -136,7 +146,8 @@ public function update_korisnik_id($sifra){
         $this->korisnicko_ime,
         $this->email,
         $this->sifra,
-        $this->pol);
+        $this->pol,
+        $this->sifra_uloge);
 
 
 

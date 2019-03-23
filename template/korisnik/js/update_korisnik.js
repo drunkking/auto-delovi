@@ -22,6 +22,8 @@ function up_korisnik(sifra){
         slika = document.getElementById("slika_k").files[0].name;
     }
 
+    var uloga = Number(document.getElementById("uloga_k").value);
+
   
     var korisnik_obj = {
         "sifra_k": sifra_k,
@@ -32,7 +34,8 @@ function up_korisnik(sifra){
         "korisnicko_ime": korisnicko_ime,
         "email": email,
         "sifra": sifra,
-        "pol": pol
+        "pol": pol,
+        "sifra_uloge": uloga
     };
 
     
@@ -44,9 +47,9 @@ function up_korisnik(sifra){
         if(this.readyState == 4 && this.status == 200){
    
 
-            
+            while(1){
             console.log(this.responseTest);
-        
+            }
         }
     };
 
@@ -56,4 +59,3 @@ function up_korisnik(sifra){
 }
 
 
-console.log(document.getElementById("help_slika").innerText);

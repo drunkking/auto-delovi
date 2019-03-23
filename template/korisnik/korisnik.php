@@ -1,6 +1,6 @@
 <?php require_once("../includes/data/header_nav.php"); ?>
 
-<body onload="load_k(<?php echo $_GET['data']; ?>)">
+<body onload="load_k(<?php echo $_GET['data']; ?>);lo_uloge();">
 
 
 <!-- Navbar-->
@@ -69,7 +69,13 @@
                         </div>
 
 
-                    
+                        <div class="form-group">
+                            <h5>Uloga</h5>
+                            <select class="form-control"  id="uloga_k">
+
+                            </select>
+                        </div>  
+
 
                         <div class="form-group">
                             <button type="submit" name="submit" class="btn btn-primary" onclick="up_korisnik(<?php echo $_GET['data']; ?>);">Izmeni</button>
@@ -89,6 +95,8 @@
 
       <script src="js/load_korisnik_id.js"></script>
       <script src="js/update_korisnik.js"></script>
+      <script src="js/load_uloge.js"></script>
+
 
   <?php require_once("../includes/data/footer.php"); ?>
 

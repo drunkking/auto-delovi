@@ -18,8 +18,10 @@ if(!empty($_POST["korisnik"])){
         $obj_korisnik->korisnicko_ime,
         $obj_korisnik->email,
         $obj_korisnik->sifra,
-        $obj_korisnik->pol
+        $obj_korisnik->pol,
+        $obj_korisnik->sifra_uloge
     );
+
     $korisnik->update_korisnik_id($obj_korisnik->sifra_k);
 
     $arr = array(
@@ -29,5 +31,6 @@ if(!empty($_POST["korisnik"])){
     echo json_encode($arr);
     
 }
+
 
 ?>
