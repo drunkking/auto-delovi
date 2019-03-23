@@ -18,7 +18,8 @@ function up_proizvod(sifra){
 
     var sif_kategorije = document.getElementById("kategorija").value;
 
-    
+    var stanje = document.getElementById("stanje_p").value;
+
 
     var proizvod_obj = {
         "sifra": sifra_p,
@@ -27,12 +28,12 @@ function up_proizvod(sifra){
         "slika": slika,
         "za_vozila": za_vozila,
         "cena": cena,
-        "sifra_kategorije": sif_kategorije
+        "sifra_kategorije": sif_kategorije,
+        "stanje": stanje
     };
 
 
     
-
     xmlhttp = new XMLHttpRequest();
     proizvod_obj_json = JSON.stringify(proizvod_obj);
 
@@ -40,7 +41,9 @@ function up_proizvod(sifra){
     xmlhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
 
+          
             console.log(this.responseText);
+            
         }
     };
     

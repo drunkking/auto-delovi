@@ -16,8 +16,9 @@ if(!empty($_POST["proizvod"])){
         $obj_proizvod->proizvodjac,
         $obj_proizvod->za_vozila,
         $obj_proizvod->slika,
-        $obj_proizvod->cena,
-        $obj_proizvod->sifra_kategorije
+        intval($obj_proizvod->cena),
+        $obj_proizvod->sifra_kategorije,
+        intval($obj_proizvod->stanje)
     );
     $prozvod->insert_proizvod();
 

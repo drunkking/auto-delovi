@@ -50,6 +50,10 @@
                             </select>
                         </div>
 
+                        <div class="form-group" id="kat">
+                            <br>
+                            <input type="number" class="form-control" id="stanje_p" min="0" placeholder="Stanje">
+                        </div>
 
 
                         <div class="form-group">

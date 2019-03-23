@@ -13,6 +13,8 @@ function submit_proizvod(){
 
     var sif_kategorije = document.getElementById("kategorija").value;
 
+    var stanje = document.getElementById("stanje_p").value;
+
 
     var proizvod_obj = {
         "naziv": naziv,
@@ -20,7 +22,8 @@ function submit_proizvod(){
         "slika": slika,
         "za_vozila": za_vozila,
         "cena": cena,
-        "sifra_kategorije": sif_kategorije
+        "sifra_kategorije": sif_kategorije,
+        "stanje": stanje
     };
 
    
@@ -31,7 +34,7 @@ function submit_proizvod(){
     
     xmlhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
-
+            
             
             console.log(this.responseText);
             

@@ -51,9 +51,13 @@
                             <select class="form-control" id="kategorija">  
                             </select>
                         </div>
-                    
-                    
 
+                        <div class="form-group">
+                            <h5>Stanje</h5>
+                            <input type="number" class="form-control" id="stanje_p" min="0">
+                        </div>
+                    
+                    
                         <div class="form-group">
                             <h5>Cena</h5>
                             <input type="number" class="form-control" id="cena_p" min="0">

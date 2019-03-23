@@ -30,6 +30,7 @@
                           <th>Slika</th>
                           <th>Cena</th>
                           <th>Kategorija</th>
+                          <th>Stanje</th>
                           <th>Izmeni</th>
                           <th>Obriši</th>
                         </tr>

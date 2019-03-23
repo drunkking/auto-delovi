@@ -34,6 +34,11 @@ class Proizvod extends Database {
      */
     private $sifra_kategorije;
 
+    /**
+     * int
+     */
+    private $stanje;
+
     
     public function __construct(){
 
@@ -44,7 +49,7 @@ class Proizvod extends Database {
         $this->test_connection();
     }
 
-    public function set_proizvod($naziv, $proizvodjac, $za_vozila, $slika, $cena, $sifra_kategorije){
+    public function set_proizvod($naziv, $proizvodjac, $za_vozila, $slika, $cena, $sifra_kategorije, $stanje){
 
         $this->naziv = $naziv;
 
@@ -57,6 +62,8 @@ class Proizvod extends Database {
         $this->cena = $cena;
 
         $this->sifra_kategorije = $sifra_kategorije;
+
+        $this->stanje = $stanje;
     }
 
 
@@ -68,16 +75,18 @@ class Proizvod extends Database {
             za_vozila,
             slika,
             cena,
-            sifra_kategorije)
-            VALUES (?, ?, ?, ?, ?, ?)");
+            sifra_kategorije,
+            stanje)
+            VALUES (?, ?, ?, ?, ?, ?, ?)");
 
-        $insert_query->bind_param("sssssi",
+        $insert_query->bind_param("ssssiii",
             $this->naziv,
             $this->proizvodjac,
             $this->za_vozila,
             $this->slika,
             $this->cena,
-            $this->sifra_kategorije);
+            $this->sifra_kategorije,
+            $this->stanje);
 
         $insert_query->execute();
     }
@@ -105,16 +114,18 @@ class Proizvod extends Database {
             za_vozila = (?),
             slika = (?),
             cena = (?),
-            sifra_kategorije = (?)
+            sifra_kategorije = (?),
+            stanje = (?)
             WHERE sifra_proizvoda = $sifra");
 
-        $update_query->bind_param("sssssi", 
+        $update_query->bind_param("ssssiii", 
             $this->naziv, 
             $this->proizvodjac, 
             $this->za_vozila, 
             $this->slika, 
             $this->cena,
-            $this->sifra_kategorije);
+            $this->sifra_kategorije,
+            $this->stanje);
 
         $update_query->execute();
     }
@@ -125,7 +136,9 @@ class Proizvod extends Database {
             proizvodjac,
             za_vozila,
             slika,
-            cena
+            cena,
+            sifra_kategorije,
+            stanje
             FROM proizvod
             WHERE sifra_proizvoda = $sifra");
 
