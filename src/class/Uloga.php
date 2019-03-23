@@ -35,6 +35,21 @@ class Uloga extends Database {
         $insert_qurey->execute();
     }
 
+
+    public function return_uloga_id($sifra){
+
+        $select_query = $this->set_query("SELECT naziv
+            FROM uloga
+            WHERE sifra_uloge = $sifra");
+
+        while($row = $select_query->fetch_assoc()){
+            $result = $row;
+        }
+
+        return $result;
+
+    }
+
     public function all_uloga(){
 
         $result = array();
