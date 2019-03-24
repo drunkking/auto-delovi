@@ -10,9 +10,6 @@ function lo_proizvod() {
 
             for(var i = 0; i < myObj.length; i++) {
 
-                
-    
-
               row += "<div class='col-lg-3  col-md-6 mb-4'>";
               row += "<div class='card h-100'>";
               row += "<a href='#'><img class='card-img-top' height='200' width='200' src='template/proizvod/images/" + myObj[i]['slika'] + "' alt=''></a>";
