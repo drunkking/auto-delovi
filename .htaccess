@@ -1,8 +1,6 @@
 # zabrana pregleda dir
 Options All -Indexes
 
-# redirekcija
-ErrorDocument 403 ZABRANJEN_PRISTUP
-ErrorDocument 404 NE_POSTOJI_STRANA
+
 
 

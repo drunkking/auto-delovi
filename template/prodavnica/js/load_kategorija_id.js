@@ -1,4 +1,3 @@
-
 function li_kategorija() {
 
     var xmlhttp = new XMLHttpRequest();
@@ -14,7 +13,7 @@ function li_kategorija() {
             for(var i = 0; i < myObj.length; i++) {
 
                 naziv = myObj[i]['naziv'];
-                row += "<a href='template/prodavnica/proizvodi_kat.php?data="+ myObj[i]['sifra_kategorije'] +"'  class='list-group-item kat'>" + naziv.toUpperCase(); + "</a>";
+                row += "<a href='proizvodi_kat.php?data="+ myObj[i]['sifra_kategorije'] +"'  class='list-group-item kat'>" + naziv.toUpperCase(); + "</a>";
             }
 
             document.getElementById("kategorija").innerHTML = row;
@@ -24,7 +23,7 @@ function li_kategorija() {
         
     };
 
-    xmlhttp.open("POST", "../auto_delovi/src/includes/vrati_sve_kategorije.php", true);
+    xmlhttp.open("POST", "../../src/includes/vrati_sve_kategorije.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send();
 

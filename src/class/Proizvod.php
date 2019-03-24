@@ -149,6 +149,21 @@ class Proizvod extends Database {
         return $result;
     }
 
+    public function all_proizvod_kategorija($sifra_kategorije){
+
+        $result = array();
+
+        $select_query = $this->set_query("SELECT * 
+            FROM proizvod 
+            WHERE sifra_kategorije = $sifra_kategorije");
+
+        while($row = $select_query->fetch_assoc()){
+            $result[] = $row;
+        }
+
+        return $result;
+    }
+
 
     public function delete_proizvod_id($sifra){
 
