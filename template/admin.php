@@ -24,8 +24,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
+            <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link active" href="admin.php">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="../index.php">Sajt</a>
             <a class="nav-item nav-link" href="#">Username</a>
             <a class="nav-item nav-link" href="#">Odjavi se</a>
             </div>
