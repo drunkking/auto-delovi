@@ -1,6 +1,6 @@
 <?php require_once("template/includes/data/prodavnica/index_header.php"); ?>
 
-<body>
+<body onload="li_kategorija()">
 
   <!-- Navigation -->
       <?php require_once("template/includes/data/prodavnica/index_navbar.php"); ?>
@@ -14,12 +14,8 @@
 
         <h1 class="my-4">Asortiman</h1>
 
-      <div class="list-group my-4" >
-          <a href="#" class="list-group-item kat">KATEGORIJA 1</a>
-          <a href="#" class="list-group-item kat">KATEGORIJA 2</a>
-          <a href="#" class="list-group-item kat">KATEGORIJA 3</a>
-          <a href="#" class="list-group-item kat">KATEGORIJA 4</a>
-          <a href="#" class="list-group-item kat">KATEGORIJA 5</a>
+      <div id="kategorija" class="list-group my-4" >
+
       </div>
 
       </div>
@@ -61,5 +57,6 @@
   </div>
   <!-- /.container -->
 
+  <script src="template/prodavnica/js/load_kategorija.js"></script>
   <!-- Footer -->
   <?php require_once("template/includes/data/prodavnica/index_footer.php"); ?>
