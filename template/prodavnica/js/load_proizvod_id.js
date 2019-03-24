@@ -16,8 +16,11 @@ function lo_proizvod(sifra) {
     xmlhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
 
+            
             var myObj = JSON.parse(this.responseText);
             var row = "";
+            
+            if(myObj.length > 0){
 
             for(var i = 0; i < myObj.length; i++) {
 
@@ -36,7 +39,15 @@ function lo_proizvod(sifra) {
               row += "</div>";
               row += "</div>";
 
-            }
+               }
+
+           } else {
+
+            row += "<div class='col-lg-12 text-center'>";
+             row += "<div class='alert alert-warning' role='alert'><h3>Nema proizvoda u ovoj kategoriji</h3></div>";
+             row += "</div>";
+
+           }
 
             document.getElementById("data").innerHTML = row;
         }

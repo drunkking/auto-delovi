@@ -7,7 +7,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="template/admin.php">ADMIN TEST</a>
+            <a class="nav-link" href="../admin.php">ADMIN TEST</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Korpa 0 RSD</a>
