@@ -1,6 +1,6 @@
 <?php require_once("template/includes/data/prodavnica/index_header.php"); ?>
 
-<body onload="li_kategorija()">
+<body onload="li_kategorija();lo_proizvod();">
 
   <!-- Navigation -->
       <?php require_once("template/includes/data/prodavnica/index_navbar.php"); ?>
@@ -29,10 +29,10 @@
        <?php require_once("template/includes/data/prodavnica/index_slide.php"); ?>
 
 
-        <div class="row">
+        <div class="row" id="data">
 
          <!-- data -->
-         <?php require_once("template/includes/data/prodavnica/index_data.php"); ?>
+       
 
         </div>
         <!-- /.row -->
@@ -58,5 +58,6 @@
   <!-- /.container -->
 
   <script src="template/prodavnica/js/load_kategorija.js"></script>
+  <script src="template/prodavnica/js/load_proizvod.js"></script>
   <!-- Footer -->
   <?php require_once("template/includes/data/prodavnica/index_footer.php"); ?>
