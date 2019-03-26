@@ -14,8 +14,9 @@ CREATE TABLE proizvod (
     proizvodjac VARCHAR(60) NOT NULL,
     za_vozila VARCHAR(255) NOT NULL,
     slika VARCHAR(255),
-    cena DOUBLE NOT NULL,
+    cena INTEGER NOT NULL,
     sifra_kategorije INTEGER,
+    stanje INTEGER,
     PRIMARY KEY(sifra_proizvoda),
     FOREIGN KEY(sifra_kategorije) REFERENCES kategorija(sifra_kategorije)
 );
@@ -41,4 +42,23 @@ CREATE TABLE korisnik (
     sifra_uloge INTEGER,
     PRIMARY KEY(sifra_korisnika),
     FOREIGN KEY(sifra_uloge) REFERENCES uloga(sifra_uloge)
+);
+
+CREATE TABLE narudzbenica (
+    sifra_narudzbenice INTEGER NOT NULL AUTO_INCREMENT,
+    sifra_interna INTEGER NOT NULL,
+    datum_narucivanja DATE NOT NULL,
+    sifra_korisnika INTEGER,
+    PRIMARY KEY(sifra_narudzbenice),
+    FOREIGN KEY(sifra_korisnika) REFERENCES korisnik(sifra_korisnika)
+);
+
+CREATE TABLE stavka_narudzbenice (
+    sifra_stavke INTEGER NOT NULL AUTO_INCREMENT,
+    sifra_narudzbenice INTEGER,
+    sifra_proizvoda INTEGER,
+    kolicina INTEGER,
+    PRIMARY KEY(sifra_stavke),
+    FOREIGN KEY(sifra_narudzbenice) REFERENCES narudzbenica(sifra_narudzbenice),
+    FOREIGN KEY(sifra_proizvoda) REFERENCES proizvod(sifra_proizvoda)
 );
