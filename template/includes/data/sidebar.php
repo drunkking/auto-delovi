@@ -25,6 +25,20 @@
             <a class="dropdown-item" href="../kategorija/dodaj_kategoriju.php">Dodaj kategoriju</a>
         </div>
         </div>
+
+        <!--Narudzbenice-->
+        <div class="dropdown">
+        <a class="list-group-item list-group-item-action bg-light "  id="dropdownMenu"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-shipping-fast"></i> Narudzbenice
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <a class="dropdown-item" href="../narudzbenica/sve_narudzbenice.php">Sve narudzbenice</a>
+            <a class="dropdown-item" href="../narudzbenica/dodaj_kategoriju.php">Dodaj narudzbenicu</a>
+        </div>
+        </div>
+
+
+
       
         <!-- Korisnici-->
         <div class="dropdown">

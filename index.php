@@ -29,7 +29,10 @@
        <?php require_once("template/includes/data/prodavnica/index_slide.php"); ?>
 
 
+
+
         <div class="row" id="data">
+
 
          <!-- data -->
        
@@ -57,5 +60,6 @@
 
   <script src="template/prodavnica/js/load_kategorija.js"></script>
   <script src="template/prodavnica/js/load_proizvod.js"></script>
+  <script src="template/prodavnica/js/app.js"></script>
   <!-- Footer -->
   <?php require_once("template/includes/data/prodavnica/index_footer.php"); ?>

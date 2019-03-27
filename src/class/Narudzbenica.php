@@ -56,6 +56,20 @@ class Narudzbenica extends Database {
         }
     }
 
+
+    public function  all_narudzbenica(){
+
+        $result = array();
+
+        $select_query = $this->set_query("SELECT * FROM narudzbenica");
+
+        while($row = $select_query->fetch_assoc()){
+            $result[] = $row;
+        }
+
+        return $result;
+    }
+
     public function set_narudzbenica($datum_narucivanja, $sifra_korisnika, $sifra_interna){
 
         $this->datum_narucivanja = $datum_narucivanja;
