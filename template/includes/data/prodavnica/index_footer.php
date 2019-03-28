@@ -22,7 +22,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <table class="table">
+        <table class="table text-center">
             <thead>
               <tr>
                 <th>Slika</th>
@@ -36,10 +36,11 @@
             </tbody>
 
         </table>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Obustavi</button>
-        <button type="button" class="btn btn-primary">Naruci</button>
+        <button type="button" class="btn btn-primary" onclick="naruci();">Naruci</button>
       </div>
     </div>
   </div>

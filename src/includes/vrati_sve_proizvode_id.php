@@ -19,7 +19,4 @@ if(!empty($_POST["proizvod"])){
 
 }
 
-
-
-
 ?>

@@ -21,7 +21,7 @@ function lo_proizvod() {
               row += "<h5 id='cena_p'>" + myObj[i]['cena'] + "</h5>";
               row += " <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>";
               row += "</div>";
-              row += "<button class='dodaj_u_korpu btn btn-primary'>DODAJ U KORPU</button>"
+              row += "<button class='dodaj_u_korpu btn btn-primary' data-id='" +  myObj[i]['sifra_proizvoda'] + "'>DODAJ U KORPU</button>";
               row += "</div>";
               row += "</div>";
 
@@ -38,4 +38,4 @@ function lo_proizvod() {
 }
 
 
-
+//
