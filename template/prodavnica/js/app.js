@@ -38,7 +38,6 @@ const pro_info = {
  
 }
 
-console.log(pro_info);
 
 ubaci_u_korpu(pro_info);
 
@@ -69,7 +68,6 @@ cuvaj(proizvod);
 
 function cuvaj(proizvod){
 
-    
 
 let arr = getCoursesFromStorage();
 
@@ -77,7 +75,7 @@ let arr = getCoursesFromStorage();
 arr.push(proizvod);
 
 //since sotrage only saves string
-localStorage.setItem('courses', JSON.stringify(arr));
+localStorage.setItem('keskolica', JSON.stringify(arr));
 }
 
 
@@ -88,10 +86,10 @@ function getCoursesFromStorage(){
 
 //i something exit on the sotrage then we get the value, create empty array
 
-if(localStorage.getItem('courses') === null){
+if(localStorage.getItem('keskolica') === null){
   courses = [];
 } else {
-  courses = JSON.parse(localStorage.getItem('courses'));
+  courses = JSON.parse(localStorage.getItem('keskolica'));
 }
 
 return courses;
@@ -124,27 +122,29 @@ coursesLS.forEach(function(proizvod){
 
 function kolicina(kol, sifra){
 
-  let courses;
+  let kolica;
 
   
-  if(localStorage.getItem('courses') === null){
-    courses = [];
+  if(localStorage.getItem('keskolica') === null){
+    kolica = [];
   } else {
-    courses = JSON.parse(localStorage.getItem('courses'));
+    kolica = JSON.parse(localStorage.getItem('keskolica'));
   }
 
-  for(var i = 0; i < courses.length; i++){
+  for(var i = 0; i < kolica.length; i++){
 
-    if(courses[i].sifra == sifra){
+    if(kolica[i].sifra == sifra){
       
-      courses[i].kolicina = kol;
+      kolica[i].kolicina = kol;
     }
   }
 
-
-    localStorage.setItem('courses', JSON.stringify(courses));
+    localStorage.setItem('keskolica', JSON.stringify(kolica));
 
  }
+
+
+
 
     
 

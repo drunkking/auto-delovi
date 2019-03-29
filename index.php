@@ -1,6 +1,6 @@
 <?php require_once("template/includes/data/prodavnica/index_header.php"); ?>
 
-<body onload="li_kategorija();lo_proizvod();">
+<body onload="lo_proizvod();li_kategorija();">
 
   <!-- Navigation -->
       <?php require_once("template/includes/data/prodavnica/index_navbar.php"); ?>
@@ -25,16 +25,18 @@
 
       <div class="col-lg-8">
 
-       <!-- slidebar -->
-       <?php require_once("template/includes/data/prodavnica/index_slide.php"); ?>
 
-
-
+          <!-- slidebar -->
+    <?php require_once("template/includes/data/prodavnica/index_slide.php"); ?>
+     
 
         <div class="row" id="data">
 
-
          <!-- data -->
+         
+
+
+
        
 
         </div>
@@ -61,5 +63,6 @@
   <script src="template/prodavnica/js/load_kategorija.js"></script>
   <script src="template/prodavnica/js/load_proizvod.js"></script>
   <script src="template/prodavnica/js/app.js"></script>
+  <script src="template/prodavnica/js/naruci_proizvode.js"></script>
   <!-- Footer -->
   <?php require_once("template/includes/data/prodavnica/index_footer.php"); ?>

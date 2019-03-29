@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Auto delovi</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +12,10 @@
             <a class="nav-link" href="../admin.php">ADMIN TEST</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Korpa 0 RSD</a>
+            <a class="nav-link " href="#"  data-toggle="modal" data-target="#exampleModal">
+               Korpa
+              <i class="fas fa-shopping-cart"></i> </a>
+            
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Prijavi se</a>

@@ -59,5 +59,7 @@
 
   <script src="js/load_kategorija_id.js"></script>
   <script src="js/load_proizvod_id.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/naruci_proizvode.js"></script>
   <!-- Footer -->
   <?php require_once("index_footer.php"); ?>

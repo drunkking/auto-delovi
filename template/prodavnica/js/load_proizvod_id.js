@@ -31,8 +31,8 @@ function lo_proizvod(sifra) {
               row += "<h4 class='card-title'>";
               row += "<a href='#' id='naziv_p'>"+ myObj[i]['naziv']+"</a>";
               row += "</h4>";
-              row += "<label>Cena:</label>";
-              row += "<h5 id='cena_p'>" + myObj[i]['cena'] + " <small>RSD</small></h5>";
+              row += "<label>Cena: <small>RSD</small></label>";
+              row += "<h5 id='cena_p'>" + myObj[i]['cena'] + "</h5>";
               row += " <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>";
               row += "</div>";
               row += "<button class='dodaj_u_korpu btn btn-primary' data-id='" +  myObj[i]['sifra_proizvoda'] + "'>DODAJ U KORPU</button>";

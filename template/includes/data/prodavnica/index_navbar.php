@@ -9,12 +9,7 @@
           <li class="nav-item active">
             <a class="nav-link" href="template/admin.php">ADMIN TEST</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#"  data-toggle="modal" data-target="#exampleModal">
-               Korpa
-              <i class="fas fa-shopping-cart"></i> </a>
-            
-          </li>
+      
           <li class="nav-item">
             <a class="nav-link" href="#">Prijavi se</a>
           </li>
