@@ -9,9 +9,24 @@ function load_event(){
 pro.addEventListener('click', ubaci);
 
 
+
 document.addEventListener('DOMContentLoaded', getFromLocalStorage);
 
 }
+
+
+function ocistiKorpu(){
+
+
+  var row = " ";
+
+  document.getElementById('korpa').innerHTML = row;
+
+
+  localStorage.clear();
+}
+
+
 
 
 function ubaci(e){

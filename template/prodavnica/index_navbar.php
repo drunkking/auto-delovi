@@ -18,10 +18,10 @@
             
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Prijavi se</a>
+               <a class="nav-link" data-toggle="modal" data-target="#LoginModal" href="#">Prijavi se</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Registruj se</a>
+              <a class="nav-link" data-toggle="modal" data-target="#RegiModal" href="#">Registruj se</a>
           </li>
  
         </ul>

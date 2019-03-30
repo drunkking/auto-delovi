@@ -11,8 +11,6 @@ function naruci(){
         
     kolica = JSON.stringify(localStorage.getItem('keskolica'));
 
-
-
     xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function(){

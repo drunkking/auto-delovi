@@ -30,7 +30,7 @@ class Narudzbenica extends Database {
      */
     private $niz_stavki = [];
 
-    
+
 
     public function __construct(){
 
@@ -39,6 +39,7 @@ class Narudzbenica extends Database {
         $this->connect_to_db();
 
         $this->test_connection();
+
 
     }
 
@@ -70,6 +71,9 @@ class Narudzbenica extends Database {
         return $result;
     }
 
+
+
+    
     public function set_narudzbenica($datum_narucivanja, $sifra_korisnika, $sifra_interna){
 
         $this->datum_narucivanja = $datum_narucivanja;
@@ -77,19 +81,23 @@ class Narudzbenica extends Database {
         $this->sifra_korisnika = $sifra_korisnika;
 
         $this->sifra_interna = $sifra_interna;
+
     }
+
 
     
     public function set_sifra_narudzbenice(){
 
+       
+        $sif = $this->sifra_interna;
 
         $select_sifra = $this->set_query("SELECT sifra_narudzbenice 
             FROM narudzbenica 
-            WHERE sifra_interna = $this->sifra_interna");
+            WHERE sifra_interna = $sif");
 
         $result = $select_sifra->fetch_assoc();
 
-        $this->sifra_narudzbenice = $result['sifra_narudzbenice'];
+       $this->sifra_narudzbenice = $result['sifra_narudzbenice'];
     }
 
 
@@ -109,31 +117,10 @@ class Narudzbenica extends Database {
 
         $insert_query->execute();
 
-        $this->set_sifra_narudzbenice();
-
     }
 
 }
 
-/*
-
-$nar = new Narudzbenica();
-
-
-$nar->set_narudzbenica("2016",1,436);
-$nar->insert_narudzbenica();
-
-for($i = 1; $i < 4; $i++){
-
-    $stavka = new StavkaNarudzbenice();
-    $stavka->set_stavka_narudzbenice($nar->sifra_narudzbenice, 1, $i);
-    $nar->push_stavka($stavka);
-}
-
-
-$nar->insert_stavka_all();
-
-*/
 
 
 ?>

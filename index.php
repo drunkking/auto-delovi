@@ -3,7 +3,7 @@
 <body onload="lo_proizvod();li_kategorija();">
 
   <!-- Navigation -->
-      <?php require_once("template/includes/data/prodavnica/index_navbar.php"); ?>
+      <?php require_once("template/includes/data/prodavnica/index_navbar.php");  ?>
 
   <!-- Page Content -->
   <div class="container-fluid">
@@ -36,7 +36,6 @@
          
 
 
-
        
 
         </div>
@@ -64,5 +63,8 @@
   <script src="template/prodavnica/js/load_proizvod.js"></script>
   <script src="template/prodavnica/js/app.js"></script>
   <script src="template/prodavnica/js/naruci_proizvode.js"></script>
+
+  
   <!-- Footer -->
   <?php require_once("template/includes/data/prodavnica/index_footer.php"); ?>
+

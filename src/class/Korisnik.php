@@ -1,5 +1,6 @@
 <?php require_once("Database.php"); ?>
 
+<? session_start(); ?>
 <?php
 
 class Korisnik extends Database {
@@ -60,6 +61,49 @@ public function __construct(){
     $this->test_connection();
 }
 
+
+public function login(){
+
+
+    $result = array();
+
+    $login_query = $this->set_query("SELECT * FROM  korisnik WHERE  korisnicko_ime = '{$this->korisnicko_ime}' ");
+
+    while($row = $login_query->fetch_assoc()){
+        $result = $row;
+    }
+
+    
+    $temp_korisicko = $result['korisnicko_ime'];
+    $temp_sifra = $result['sifra'];
+
+    if($temp_korisicko === $this->korisnicko_ime && password_verify($this->sifra, $temp_sifra)){
+            
+        $_SESSION['spec'] = $temp_korisicko;
+
+            if($result['sifra_uloge'] == 1){
+                header("Location: ../../template/admin/admin.php");
+                
+            }
+
+            if($result['sifra_uloge'] == 2){
+                header("Location: https://www.youtube.com");
+            }
+               
+            
+    }
+
+
+  
+}
+
+public function set_korisnik_login($username, $sifra){
+
+    $this->korisnicko_ime = $username;
+
+    $this->sifra = $sifra;
+}
+
 public function set_korisnik($ime, $prezime, $slika, $datum_rodjenja, $korisnicko_ime, $email, $sifra, $pol, $sifra_uloge){
 
     $this->ime = $ime;
@@ -83,6 +127,8 @@ public function set_korisnik($ime, $prezime, $slika, $datum_rodjenja, $korisnick
 
 public function insert_korisnik(){
 
+    $hash_sifra = password_hash($this->sifra, PASSWORD_DEFAULT);
+
     $insert_query = $this->prepare_query("INSERT INTO korisnik(
         ime,
         prezime,
@@ -102,7 +148,7 @@ public function insert_korisnik(){
         $this->datum_rodjenja,
         $this->korisnicko_ime,
         $this->email,
-        $this->sifra,
+        $hash_sifra,
         $this->pol,
         $this->sifra_uloge);
 
@@ -126,6 +172,8 @@ public function all_korisnik(){
 
 public function update_korisnik_id($sifra){
 
+    $hash_sifra = password_hash($this->sifra, PASSWORD_DEFAULT);
+
     $update_query = $this->prepare_query("UPDATE korisnik SET
         ime = (?),
         prezime = (?),
@@ -145,7 +193,7 @@ public function update_korisnik_id($sifra){
         $this->datum_rodjenja,
         $this->korisnicko_ime,
         $this->email,
-        $this->sifra,
+        $hash_sifra,
         $this->pol,
         $this->sifra_uloge);
 

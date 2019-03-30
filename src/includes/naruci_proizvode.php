@@ -1,7 +1,20 @@
 <?php require_once("../class/Narudzbenica.php"); ?>
+<?php 
+session_start();
+
+ $_SESSION['token'] = mt_rand();
+
+
+?>
 
 <?php
 header("Content-Type: application/json; charset=UTF-8");
+
+function generateRandomString($length = 10) {
+    return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+}
+
+
 
 if(!empty($_POST["proizvod"])){
 
@@ -56,16 +69,19 @@ if(!empty($_POST["proizvod"])){
                    
     }
 
+ 
 
+
+    $today = date("Y-m-d");
+    $narudz = new Narudzbenica();
+    $num = $_SESSION['token'];
 
     
-  
-
-
-    $narudz = new Narudzbenica();
-
-    $narudz->set_narudzbenica("2019",1, 223);
+    $narudz->set_narudzbenica($today, 1, $num);
     $narudz->insert_narudzbenica();
+    $narudz->set_sifra_narudzbenice();
+    
+
 
     for($i = 0; $i < count($niz); ++$i){
 
@@ -75,13 +91,17 @@ if(!empty($_POST["proizvod"])){
     }
 
     $narudz->insert_stavka_all();
-    
-    
-    
 
 
 
-    
+    $arr = [
+        'status' => 'ok'
+    ];
+
+
+
+
+    echo json_encode($arr);
 
 
 

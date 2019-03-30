@@ -15,7 +15,13 @@
  <!-- Modal -->
 <?php require_once("modal.php"); ?>
 
+<?php require_once("login_modal.php"); ?>
+
+<?php require_once("registracija_modal.php"); ?>
 
 </body>
 
 </html>
+
+
+

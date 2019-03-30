@@ -8,25 +8,36 @@
         </button>
       </div>
       <div class="modal-body">
-        <table class="table text-center">
-            <thead>
-              <tr>
-                <th>Slika</th>
-                <th>Naziv</th>
-                <th>Cena</th>
-                <th>Kolicina</th>
-              </tr>
-            </thead>
-            <tbody id="korpa">
 
-            </tbody>
+      <div class="container">
+              <div class="row">
+                <div class="col-lg-6">
 
-        </table>
+                  <table class="table text-center">
+                    <thead>
+                      <tr>
+                        <th>Slika</th>
+                        <th>Naziv</th>
+                        <th>Cena</th>
+                        <th>Kolicina</th>
+                      </tr>
+                    </thead>
+                    <tbody id="korpa">
+
+                    </tbody>
+
+                </table>
+
+
+                </div>
+              </div>
+         </div>
+
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Obustavi</button>
-        <button type="button" class="btn btn-primary" onclick="naruci();">Naruci</button>
+        <button type="button" class="btn btn-secondary" id="brisi" onclick="ocistiKorpu();" data-dismiss="modal">Obustavi</button>
+        <button type="button" class="btn btn-primary" onclick="naruci();ocistiKorpu()">Naruci</button>
       </div>
     </div>
   </div>
