@@ -1,6 +1,6 @@
 <?php require_once("Database.php"); ?>
 
-<? session_start(); ?>
+
 <?php
 
 class Korisnik extends Database {
@@ -103,6 +103,8 @@ public function set_korisnik_login($username, $sifra){
 
     $this->sifra = $sifra;
 }
+
+
 
 public function set_korisnik($ime, $prezime, $slika, $datum_rodjenja, $korisnicko_ime, $email, $sifra, $pol, $sifra_uloge){
 

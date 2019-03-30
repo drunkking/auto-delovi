@@ -8,7 +8,7 @@
             <a class="nav-item nav-link active" href="../admin.php">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="../../index.php">Sajt</a>
             <a class="nav-item nav-link" href="#"><?php  if(isset($_SESSION['spec'])) echo $_SESSION['spec']; else echo "Username"; ?></a>
-            <a class="nav-item nav-link" href="#">Odjavi se</a>
+            <a class="nav-item nav-link" href="../../../src/includes/odjavi_korisnika.php">Odjavi se</a>
             </div>
         </div>
     </nav>
