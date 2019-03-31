@@ -1,6 +1,6 @@
 <?php require_once("../includes/data/header_nav.php"); ?>
 
-<body onload="lo_narudzbenica();">
+<body onload="lo_odobrena_narudzbenica();">
 
 
 <!-- Navbar-->
@@ -18,7 +18,7 @@
         <div class="container-fluid">
         <div class="row justify-content-center">
                 <div class="col-lg-12">
-                    <h1 class="pt-4 text-center">Sve narudzbenice</h1>
+                    <h1 class="pt-4 text-center">Odobrene narudzbenice</h1>
 
                     <table class="table table-hover text-center">
                       <thead>
@@ -26,7 +26,6 @@
                           <th>Šifra</th>
                           <th>Datum naručivanja</th>
                           <th>Stavka narudzbenice</th>
-                          <th>Odobri</th>
                           <th>Obriši</th>
                         </tr>
                       </thead>
@@ -44,9 +43,8 @@
 
   </div>
   <!-- wrapper -->
-  <script src="js/load_narudzbenica.js"></script>
+  <script src="js/load_odobrene.js"></script>
   <script src="js/load_stavka_narudzbenice.js"></script>
-  <script src="js/odobri_narudzbenicu.js"></script>
 
   <!-- Stavka  Modal -->
 <div class="modal fade" id="StavkaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

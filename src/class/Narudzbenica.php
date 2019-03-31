@@ -62,7 +62,22 @@ class Narudzbenica extends Database {
 
         $result = array();
 
-        $select_query = $this->set_query("SELECT * FROM narudzbenica");
+        $select_query = $this->set_query("SELECT * FROM narudzbenica
+                    WHERE stat = 0");
+
+        while($row = $select_query->fetch_assoc()){
+            $result[] = $row;
+        }
+
+        return $result;
+    }
+
+    public function  odobrena_narudzbenica(){
+
+        $result = array();
+
+        $select_query = $this->set_query("SELECT * FROM narudzbenica
+                    WHERE stat = 1");
 
         while($row = $select_query->fetch_assoc()){
             $result[] = $row;
@@ -133,8 +148,18 @@ class Narudzbenica extends Database {
 
         return $result;
 
+    }
 
+    public function odobri_narudzbenicu($sifra_narudzbenice){
 
+        $update_query = $this->prepare_query("UPDATE narudzbenica SET
+            stat = 1 
+            WHERE sifra_narudzbenice = (?)");
+        
+        $update_query->bind_param("i",
+            $sifra_narudzbenice);
+
+         $update_query->execute();
     }
 
 }

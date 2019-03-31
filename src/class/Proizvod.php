@@ -164,6 +164,22 @@ class Proizvod extends Database {
         return $result;
     }
 
+    
+    public function odobri_proizvod($sifra_proizvoda, $kolicina){
+
+        $result = array();
+
+        $update_query = $this->prepare_query("UPDATE proizvod SET
+            stanje = stanje - (?)
+            WHERE sifra_proizvoda = (?)");
+
+        $update_query->bind_param("ii",
+            $kolicina,
+            $sifra_proizvoda);
+
+        $update_query->execute();
+    }
+
 
     public function delete_proizvod_id($sifra){
 

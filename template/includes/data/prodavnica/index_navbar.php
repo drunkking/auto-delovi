@@ -6,16 +6,30 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="template/admin/admin.php">ADMIN TEST</a>
-          </li>
-      
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="modal" data-target="#LoginModal" href="#">Prijavi se</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="modal" data-target="#RegiModal" href="#">Registruj se</a>
-          </li>
+
+              <?php
+                    if(isset($_SESSION['spec'])){
+
+                      echo " <li class='nav-item'>
+                                <a href='template/admin/admin.php' class='nav-link' >Profil</a>
+                              </li>";
+                    } else 
+                    {
+                      echo '
+                          <li class="nav-item">
+                          <a class="nav-link" data-toggle="modal" data-target="#LoginModal" href="#">Prijavi se</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="modal" data-target="#RegiModal" href="#">Registruj se</a>
+                        </li>
+                      
+                      ';
+                    }
+              ?>
+
+
+
+
  
         </ul>
       </div>

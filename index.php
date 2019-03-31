@@ -63,7 +63,7 @@
   <script src="template/prodavnica/js/load_proizvod.js"></script>
   <script src="template/prodavnica/js/app.js"></script>
   <script src="template/prodavnica/js/naruci_proizvode.js"></script>
-  <script src="js/login_korisnik.js"></script>
+
   
   <!-- Footer -->
   <?php require_once("template/includes/data/prodavnica/index_footer.php"); ?>

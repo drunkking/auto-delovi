@@ -74,7 +74,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
             <a class="dropdown-item" href="../narudzbenica/sve_narudzbenice.php">Sve narudzbenice</a>
-            <a class="dropdown-item" href="../narudzbenica/sve_narudzbenice.php">Dodaj narudzbenicu</a>
+            <a class="dropdown-item" href="../narudzbenica/odobrene_narudzbenice.php">Odobrene narudzbenice</a>
         </div>
         </div>
       

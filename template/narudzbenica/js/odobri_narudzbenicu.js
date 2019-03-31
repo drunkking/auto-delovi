@@ -1,5 +1,4 @@
 
-
 function lo_narudzbenica(){
 
     var xmlhttp = new XMLHttpRequest();
@@ -29,4 +28,34 @@ function lo_narudzbenica(){
     xmlhttp.open("POST", "../../src/includes/vrati_sve_narudzbenice.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send();
+}
+
+
+
+
+function odobri(sifra_narudzbenice){
+
+    var sifra = sifra_narudzbenice;
+
+    var narudzbenica_obj = {
+        "sifra": sifra
+    };
+
+    var xmlhttp = new XMLHttpRequest();
+    narudzbenica_obj_json = JSON.stringify(narudzbenica_obj);
+
+
+    xmlhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+
+            lo_narudzbenica();
+        }
+    };
+
+    xmlhttp.open("POST","../../src/includes/odobri_narudzbenicu.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("sif_narudz="+narudzbenica_obj_json);
+
+   
+
 }

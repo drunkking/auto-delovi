@@ -12,16 +12,12 @@
             <a class="nav-link" href="../admin/admin.php">ADMIN TEST</a>
           </li>
 
-          <?php if(!empty($_SESSION['spec'])) { 
-            echo '
           <li class="nav-item">
             <a class="nav-link " href="#"  data-toggle="modal" data-target="#exampleModal">
                Korpa
               <i class="fas fa-shopping-cart"></i> </a>
-          </li>';
-          }
+          </li>
 
-          ?>
           <li class="nav-item">
                <a class="nav-link" data-toggle="modal" data-target="#LoginModal" href="#">Prijavi se</a>
           </li>
