@@ -15,9 +15,9 @@
 
 <?php require_once("../includes/data/prodavnica/modal.php"); ?>
 
-<?php require_once("../includes/data/prodavnica/login_modal.php"); ?>
+<?php require_once("../includes/data/prodavnica/login_modal_1.php"); ?>
 
-<?php require_once("../includes/data/prodavnica/registracija_modal.php"); ?>
+<?php require_once("../includes/data/prodavnica/registracija_modal_1.php"); ?>
 
 
 
