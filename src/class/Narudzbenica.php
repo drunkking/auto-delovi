@@ -119,6 +119,24 @@ class Narudzbenica extends Database {
 
     }
 
+    public function stavke($sifra_narudzbenice){
+
+
+        $result = array();
+
+        $select_query = $this->set_query("SELECT * FROM stavka_narudzbenice 
+            WHERE sifra_narudzbenice = $sifra_narudzbenice");
+
+        while($row = $select_query->fetch_assoc()){
+            $result[] = $row;
+        }
+
+        return $result;
+
+
+
+    }
+
 }
 
 
