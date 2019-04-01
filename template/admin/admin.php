@@ -15,7 +15,7 @@
 
     <title>Dashboard</title>
   </head>
-  <body>
+  <body onload="br_odobrenih();br_na_cekanju();">
 
 
     <!-- Navbar-->
@@ -121,10 +121,69 @@
     <div id="page-content-wrapper">
 
         <div class="container-fluid">
-        <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="mt-4">Admin strana</h1>
+        <div class="row pt-4">
+                
+                
+
+
+                <div class="col-lg-3 col-md-6 ">
+
+                    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header text-center"><h4>Profit</h4></div>
+                        <div class="card-body">
+                          <h5 class="card-title">RSD</h5>
+                          <h1 class="card-text">NOVAC</h1>
+                        </div>
+                      </div>
+
                 </div>
+
+
+
+                <div class="col-lg-3 col-md-6 ">
+
+                       <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <div class="card-header text-center"><h4>Odobrene</h4></div>
+                        <div class="card-body">
+                          
+                          <h5 class="card-title">Broj:</h5>
+                          <h1 class="card-text" id="odobrene">br</h1>
+                          
+                        </div>
+                      </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 ">
+
+                    <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header text-center"><h4>Na čekanju</h4></div>
+                    <div class="card-body">
+                      <h5 class="card-title">Broj:</h5>
+                      <h1 class="card-text" id="cekaju">br</h1>
+                    </div>
+                  </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 ">
+
+                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                  <div class="card-header text-center"><h4>Reklamacije</h4></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Broj:</h5>
+                    <h1 class="card-text">0</h1>
+                  </div>
+                </div>
+
+
+                </div>
+
+
+
+
             </div>
         </div>
         
@@ -139,6 +198,9 @@
     <script src="../bootstrap/jquery-3.3.1.slim.min.js"></script>
     <script src="../bootstrap/popper.min.js" ></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="js/broj_odobrenih.js"></script>
+    <script src="js/broj_na_cekanju.js"></script>
 
 
     <!-- open menu  on resize-->

@@ -15,6 +15,8 @@ for($i = 0; $i < count($svi_korisnici); $i++){
 
     $naziv_uloge = $uloga->return_uloga_id($sifra_u);
     $svi_korisnici[$i]['naziv_uloge'] = $naziv_uloge['naziv'];
+
+    $svi_korisnici[$i]['sifra'] = substr($svi_korisnici[$i]['sifra'], 0, 10);
 }
 
 

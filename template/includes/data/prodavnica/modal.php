@@ -19,7 +19,7 @@
                         <th>Slika</th>
                         <th>Naziv</th>
                         <th>Cena</th>
-                        <th>Kolicina</th>
+                        <th>Količina</th>
                       </tr>
                     </thead>
                     <tbody id="korpa">

@@ -25,7 +25,7 @@ function lo_proizvod(sifra) {
             for(var i = 0; i < myObj.length; i++) {
 
               row += "<div class='col-lg-3  col-md-6 mb-4'>";
-              row += "<div class='card h-100'>";
+              row += "<div class='card h-100 pro'>";
               row += "<a href='#'><img class='card-img-top' height='200' width='200' src='../../template/proizvod/images/" + myObj[i]['slika'] + "' alt=''></a>";
               row += "<div class='card-body'>";
               row += "<h4 class='card-title'>";
@@ -33,9 +33,9 @@ function lo_proizvod(sifra) {
               row += "</h4>";
               row += "<label>Cena: <small>RSD</small></label>";
               row += "<h5 id='cena_p'>" + myObj[i]['cena'] + "</h5>";
-              row += " <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>";
+              row += " <p class='card-text'></p>";
               row += "</div>";
-              row += "<button class='dodaj_u_korpu btn btn-primary' data-id='" +  myObj[i]['sifra_proizvoda'] + "'>DODAJ U KORPU</button>";
+              row += "<button class='dodaj_u_korpu btn btn-primary kat' data-id='" +  myObj[i]['sifra_proizvoda'] + "'>DODAJ U KORPU</button>";
               row += "</div>";
               row += "</div>";
 

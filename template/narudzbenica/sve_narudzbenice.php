@@ -3,14 +3,52 @@
 <body onload="lo_narudzbenica();">
 
 
-<!-- Navbar-->
-<?php require_once("../includes/data/navbar.php"); ?>
+    <!-- Navbar-->
+    <?php 
+        if(isset($_SESSION['admin']) && isset($_SESSION['spec'])){
+          $spec = $_SESSION['spec'];
+
+          if($_SESSION['admin'] == $spec){
+            require_once("../includes/data/navbar.php"); 
+          }
+        } else if(isset($_SESSION['user'])){
+          $spec = $_SESSION['spec'];
+          
+          if($_SESSION['user'] == $spec){
+            require_once("../includes/data/navbar_user.php"); 
+          }
+        }
+    ?>
 
   <div  class="d-flex" id="wrapper">
 
 
     <!-- Sidebar -->
-    <?php require_once("../includes/data/sidebar.php"); ?>
+    <?php
+    
+    /*
+      if(isset($_SESSION['admin'])){
+        require_once("../includes/data/sidebar.php");
+      } else if(isset($_SESSION['user'])){
+        require_once("../includes/data/sidebar_user.php");
+      }
+    */
+
+        if(isset($_SESSION['admin']) && isset($_SESSION['spec'])){
+          $spec = $_SESSION['spec'];
+
+          if($_SESSION['admin'] == $spec){
+          require_once("../includes/data/sidebar.php");
+          }
+        } else if(isset($_SESSION['user'])){
+          $spec = $_SESSION['spec'];
+          
+          if($_SESSION['user'] == $spec){
+          require_once("../includes/data/sidebar_user.php");
+          }
+        }
+
+    ?>
 
     <!-- Page Content -->
     <div  id="page-content-wrapper">
@@ -70,7 +108,7 @@
                         <th>Naziv</th>
                         <th>Slika</th>
                         <th>Cena</th>
-                        <th>Kolicina</th>
+                        <th>Količina</th>
                       </tr>
                     </thead>
                     <tbody id="stavka">

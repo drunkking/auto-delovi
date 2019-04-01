@@ -80,14 +80,17 @@ public function login(){
     if($temp_korisicko === $this->korisnicko_ime && password_verify($this->sifra, $temp_sifra)){
             
         $_SESSION['spec'] = $temp_korisicko;
+        
 
             if($result['sifra_uloge'] == 1){
+                $_SESSION['admin'] = $temp_korisicko;
                 header("Location: ../../template/admin/admin.php");
                 
             }
 
             if($result['sifra_uloge'] == 2){
-                header("Location: https://www.youtube.com");
+                $_SESSION['user'] = $temp_korisicko;
+                header("Location: ../../template/user/user.php");
             }
                
             
