@@ -12,19 +12,36 @@
             <a class="nav-link" href="../admin/admin.php">ADMIN TEST</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link " href="#"  data-toggle="modal" data-target="#exampleModal">
-               Korpa
-              <i class="fas fa-shopping-cart"></i> </a>
-          </li>
+          <?php
 
-          <li class="nav-item">
-               <a class="nav-link" data-toggle="modal" data-target="#LoginModal" href="#">Prijavi se</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" data-toggle="modal" data-target="#RegiModal" href="#">Registruj se</a>
-          </li>
+              if(isset($_SESSION['spec'])){
+
+                echo " <li class='nav-item'>
+                           <a href='../admin/admin.php' class='nav-link' >Profil</a>
+                       </li>  
+                       <li class='nav-item'>
+                       <a class='nav-link' href='#'  data-toggle='modal' data-target='#exampleModal'>
+                          Korpa
+                         <i class='fas fa-shopping-cart'></i> </a>
+                     </li>";
+              } else {
+
+                echo "
+                      <li class='nav-item'>
+                      <a class='nav-link' data-toggle='modal' data-target='#LoginModal' href='#'>Prijavi se</a>
+                      </li>
+                      <li class='nav-item'>
+                          <a class='nav-link' data-toggle='modal' data-target='#RegiModal' href='#'>Registruj se</a>
+                      </li>";
+
+
+              }
+
  
+
+
+ 
+          ?>
         </ul>
       </div>
     </div>

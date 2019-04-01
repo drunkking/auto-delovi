@@ -8,13 +8,14 @@
   <!-- Page Content -->
   <div class="container-fluid">
 
-    <div class="row">
+    <div class="row page">
 
-    <div class="col-lg-2 text-center" >
-
-        <h1 class="my-4">Asortiman</h1>
+    <div class="col-lg-2 text-center">
+   
+        
 
       <div id="kategorija" class="list-group my-4" >
+     
 
       </div>
 

@@ -15,7 +15,7 @@ a:visited {
 
 
 .kat {
-    background-color: #189AF2;
+    background-color: #2E86C1;
     color: #E4EBF0;
     font-size: 18px; 
     font-weight: 500;
@@ -23,27 +23,21 @@ a:visited {
 
 a.kat:hover {
     font-size: 20px; 
-    background-color: #105D92;
-    color: #E4EBF0;
+    color: #2E86C1;
+    background-color: #E4EBF0;
    
 }
 
-
-.submenu {
-    position: relative;
+.set {
+    background-color: #BCDAF0;
 }
 
-.submenu #shopping-cart{
-    display: none;
+
+.page {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);  
 }
-.submenu:hover #shopping-cart{
-    display: block;
-    position: absolute;
-    right:0;
-    top:100%;
-    z-index: 1;
-    background-color: white;
-    padding: 20px;
-    min-height: 400px;
-    min-width: 300px;
-}
+
+
+
+

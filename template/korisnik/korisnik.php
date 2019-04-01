@@ -15,10 +15,10 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-        <div class="container-fluid">
+        <div class="container-fluid pt-4">
         <div class="row justify-content-center">
 
-                <div class="col-lg-5">
+                <div class="col-lg-5 forma">
                     <h1 class=" pt-4 text-center">Izmeni korisnika</h1>
 
                     <form method="POST" enctype="multipart/form-data" >
@@ -35,8 +35,8 @@
 
                         <div class="form-group">
                             <h5>Slika</h5>
-                            <img id="tmp_slika" height="200px" widht="300px" src="" name="">
-                            <div id="help_slika"></div>
+                            <img class="img-fluid" id="tmp_slika" height="200px" widht="300px" src="" name="">
+                            <div class="img-fluid" id="help_slika"></div>
                             <input type="file" class="form-control-file" name="slika_k" id="slika_k">
                         </div>
 

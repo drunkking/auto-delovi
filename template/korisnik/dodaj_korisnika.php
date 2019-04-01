@@ -15,10 +15,10 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-        <div class="container-fluid">
+        <div class="container-fluid pt-4">
         <div class="row justify-content-center">
 
-                <div class="col-lg-5">
+                <div class="col-lg-5 forma">
                     <h1 class=" pt-4 text-center">Dodaj korisnika</h1>
 
                     <form method="POST" enctype="multipart/form-data" >

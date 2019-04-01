@@ -16,8 +16,8 @@
   <!-- Bootstrap  CSS -->
   <link href="template/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- spec CSS -->
-  <link href="template/includes/css/shop.css" rel="stylesheet">
   <link href="template/includes/css/all.css" rel="stylesheet">
+  <link href="template/includes/css/shop.css" rel="stylesheet">
 
   <title>Auto delovi</title>
 </head>
