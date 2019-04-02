@@ -79,7 +79,7 @@ class Proizvod extends Database {
             stanje)
             VALUES (?, ?, ?, ?, ?, ?, ?)");
 
-        $insert_query->bind_param("ssssiii",
+        $insert_query->bind_param("ssssdii",
             $this->naziv,
             $this->proizvodjac,
             $this->za_vozila,
@@ -118,7 +118,7 @@ class Proizvod extends Database {
             stanje = (?)
             WHERE sifra_proizvoda = $sifra");
 
-        $update_query->bind_param("ssssiii", 
+        $update_query->bind_param("ssssdii", 
             $this->naziv, 
             $this->proizvodjac, 
             $this->za_vozila, 
@@ -164,10 +164,11 @@ class Proizvod extends Database {
         return $result;
     }
 
+
     
     public function odobri_proizvod($sifra_proizvoda, $kolicina){
 
-        $result = array();
+        // ODOBRI PROIZVOD
 
         $update_query = $this->prepare_query("UPDATE proizvod SET
             stanje = stanje - (?)
@@ -178,7 +179,56 @@ class Proizvod extends Database {
             $sifra_proizvoda);
 
         $update_query->execute();
+
+
+        // AZURIRAJ PROFIFT
+
+        $cena_proizvoda = $this->cena_proizvoda_id($sifra_proizvoda);
+
+        $profit = $kolicina * $cena_proizvoda['cena'];
+
+        $insert_query = $this->prepare_query("INSERT INTO racun(
+            profit)
+            VALUES (?)");
+
+        $insert_query->bind_param("d",
+            $profit);
+
+        $insert_query->execute();
+
     }
+
+    public function return_profit(){
+
+        $result = array();
+
+        $select_query = $this->set_query("SELECT SUM(profit) as prof
+            FROM racun");
+
+        while($row = $select_query->fetch_assoc()){
+            $result = $row;
+        }
+
+        return $result;
+
+    }
+
+    public function cena_proizvoda_id($sifra_proizvoda){
+
+        $result = array();
+
+        $select_query = $this->set_query("SELECT cena
+            FROM proizvod 
+            WHERE sifra_proizvoda = $sifra_proizvoda");
+
+        while($row = $select_query->fetch_assoc()){
+            $result = $row;
+        }
+
+        return $result;
+
+    }
+
 
 
     public function delete_proizvod_id($sifra){
@@ -196,6 +246,7 @@ class Proizvod extends Database {
 
 
 }
+
 
 
 ?>

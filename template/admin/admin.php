@@ -15,7 +15,7 @@
 
     <title>Dashboard</title>
   </head>
-  <body onload="br_odobrenih();br_na_cekanju();">
+  <body onload="lo_profit();br_odobrenih();br_na_cekanju();">
 
 
     <!-- Navbar-->
@@ -132,7 +132,7 @@
                         <div class="card-header text-center"><h4>Profit</h4></div>
                         <div class="card-body">
                           <h5 class="card-title">RSD</h5>
-                          <h1 class="card-text">NOVAC</h1>
+                          <h1 class="card-text" id="profit">NOVAC</h1>
                         </div>
                       </div>
 
@@ -201,6 +201,7 @@
 
     <script src="js/broj_odobrenih.js"></script>
     <script src="js/broj_na_cekanju.js"></script>
+    <script src="js/load_profit.js"></script>
 
 
     <!-- open menu  on resize-->

@@ -58,7 +58,7 @@
 
                         <div class="form-group">
                             <br>
-                            <input type="number" class="form-control" id="cena_p" min="0" placeholder="Cena">
+                            <input type="number" class="form-control" id="cena_p" step="0.001" min="0" placeholder="Cena">
                         </div>
 
                         <div class="form-group">

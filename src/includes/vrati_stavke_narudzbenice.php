@@ -13,7 +13,6 @@ $proizvod = new Proizvod();
 
 $stavke_narudz = $narudzbenica->stavke($_POST['sifra']);
 
-$spec_arr = [];
 
 for($i = 0; $i  < count($stavke_narudz); $i++){
 
