@@ -181,11 +181,12 @@ class Proizvod extends Database {
         $update_query->execute();
 
 
-        // AZURIRAJ PROFIFT
+        // AZURIRAJ PROFIFT 
+        //zaradjujem 17% od vrednosti proizvoda sa pdv-om
 
         $cena_proizvoda = $this->cena_proizvoda_id($sifra_proizvoda);
 
-        $profit = $kolicina * $cena_proizvoda['cena'];
+        $profit = $kolicina * ($cena_proizvoda['cena'] * 0.17);
 
         $insert_query = $this->prepare_query("INSERT INTO racun(
             profit)

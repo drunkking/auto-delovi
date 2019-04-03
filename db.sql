@@ -62,3 +62,10 @@ CREATE TABLE stavka_narudzbenice (
     FOREIGN KEY(sifra_narudzbenice) REFERENCES narudzbenica(sifra_narudzbenice),
     FOREIGN KEY(sifra_proizvoda) REFERENCES proizvod(sifra_proizvoda)
 );
+
+CREATE TABLE racun (
+    sifra INTEGER NOT NULL AUTO_INCREMENT,
+    profit DOUBLE NOT NULL,
+    vreme TIMESTAMP,
+    PRIMARY KEY(sifra)
+);

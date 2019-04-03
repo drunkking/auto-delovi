@@ -60,7 +60,7 @@
                     
                         <div class="form-group">
                             <h5>Cena</h5>
-                            <input type="number" step="0.001" class="form-control" id="cena_p" min="0">
+                            <input type="number" step="0.01" class="form-control" id="cena_p" min="0">
                         </div>
 
                         <div class="form-group">
