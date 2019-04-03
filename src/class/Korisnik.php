@@ -64,7 +64,6 @@ public function __construct(){
 
 public function login(){
 
-
     $result = array();
 
     $login_query = $this->set_query("SELECT * FROM  korisnik WHERE  korisnicko_ime = '{$this->korisnicko_ime}' ");
@@ -91,13 +90,11 @@ public function login(){
             if($result['sifra_uloge'] == 2){
                 $_SESSION['user'] = $temp_korisicko;
                 header("Location: ../../template/user/user.php");
-            }
-               
-            
+            }    
+    } else {
+        header("Location: ../../index.php");
     }
-
-
-  
+ 
 }
 
 public function set_korisnik_login($username, $sifra){
@@ -158,6 +155,39 @@ public function insert_korisnik(){
         $this->sifra_uloge);
 
     $insert_query->execute();
+}
+
+public function register_korisnik(){
+
+    $hash_sifra = password_hash($this->sifra, PASSWORD_DEFAULT);
+
+    $insert_query = $this->prepare_query("INSERT INTO korisnik(
+        ime,
+        prezime,
+        slika,
+        datum_rodjenja,
+        korisnicko_ime,
+        email,
+        sifra,
+        pol,
+        sifra_uloge)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+        $insert_query->bind_param("ssssssssi",
+        $this->ime,
+        $this->prezime,
+        $this->slika,
+        $this->datum_rodjenja,
+        $this->korisnicko_ime,
+        $this->email,
+        $hash_sifra,
+        $this->pol,
+        $this->sifra_uloge);
+
+        $insert_query->execute();
+
+        header("Location: ../../index.php");
+
 }
 
 
@@ -242,8 +272,8 @@ public function delete_korisnik_id($sifra){
 }
 
 
-
 }
+
 
 
 

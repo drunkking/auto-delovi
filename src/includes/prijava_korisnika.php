@@ -7,16 +7,21 @@ $korisnik = new Korisnik();
 
 if(isset($_POST['submit'])){
 
-    if(isset($_POST['kor_ime_l']) && isset($_POST['sifra_l'])){
+    if(!empty($_POST['kor_ime_l']) && !empty($_POST['sifra_l'])){
 
-        $korisnicko_ime =  htmlspecialchars(stripslashes(trim($_POST['kor_ime_l'])));
-        $sifra = htmlspecialchars(stripslashes(trim($_POST['sifra_l'])));
-
-        $korisnik->set_korisnik_login($korisnicko_ime, $sifra);
-
+        $korisnik->set_korisnik_login(
+            htmlspecialchars(stripslashes(trim($_POST['kor_ime_l']))), 
+            htmlspecialchars(stripslashes(trim($_POST['sifra_l']))));
 
         $korisnik->login();
+    } else {
+        header("Location: ../../index.php");
     }
+
+     
+    
+} else {
+    header("Location: ../../index.php");
 }
 
 ?>
