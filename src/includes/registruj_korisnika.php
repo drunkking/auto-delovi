@@ -16,7 +16,8 @@ if(isset($_POST['submit'])){
         //move picture to dir
         $slika_file = $_FILES['slika_k']['name'];
         $slika_file_tmp = $_FILES['slika_k']['tmp_name'];
-         move_uploaded_file($slika_file_tmp, "../../template/korisnik/images/$slika_file");       
+        move_uploaded_file($slika_file_tmp, "../../template/korisnik/images/$slika_file");    
+        //korisinik == 2, admin == 1 
 
 
             $korisnik->set_korisnik(

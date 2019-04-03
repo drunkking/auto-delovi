@@ -13,19 +13,19 @@
               <div class="row">
                 <div class="col-lg-12">
 
-                <form method="POST" enctype="multipart/form-data">
+                <form  action="../../src/includes/registruj_korisnika.php" method="POST" enctype="multipart/form-data">
 
                         <div class="form-group row">
                             <h5 class="col-sm-2 col-form-label">Ime</h5>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="ime_k" placeholder="Ime">
+                                <input type="text" class="form-control" name="ime_k" placeholder="Ime">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <h5 class="col-sm-2 col-form-label">Prezime</h5>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="prezime_k" placeholder="Prezime">
+                                <input type="text" class="form-control" name="prezime_k" placeholder="Prezime">
                             </div>
                         </div>
 
@@ -39,39 +39,43 @@
                         <div class="form-group row" id="kat">
                             <h5 class="col-sm-4 col-form-label">Datum rodjenja</h5>
                             <div class="col-sm-8">
-                                <input type="date" class="form-control" id="datum_rodj_k" placeholder="Datum rodjenja">
+                                <input type="date" class="form-control" name="datum_rodj_k" placeholder="Datum rodjenja">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <h5 class="col-sm-4 col-form-label">Korisničko ime</h5>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="korisnicko_k" placeholder="Korisničko ime">
+                                <input type="text" class="form-control" name="korisnicko_k" placeholder="Korisničko ime">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <h5 class="col-sm-2 col-form-label">Email</h5>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="adresa_k" placeholder="Email">
+                                <input type="email" class="form-control" name="adresa_k" placeholder="Email">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <h5 class="col-sm-2 col-form-label">Šifra</h5>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="sifra_k" placeholder="Šifra">
+                                <input type="password" class="form-control" name="sifra_k" placeholder="Šifra">
                             </div>
                         </div>
 
                         <div class="form-group row" id="kat">
                             <h5 class="col-sm-2 col-form-label">Pol</h5>
                             <div class="col-sm-10">
-                                <select class="form-control"  id="pol_k">
+                                <select class="form-control"  name="pol_k">
                                     <option value="Muško">Muško</option>
                                     <option value="Žensko">Žensko</option>
                                 </select>
                             </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary"  name="submit">Potvrdi</button>
                         </div>
 
 
@@ -82,10 +86,7 @@
               </div>
          </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Odustani</button>
-        <button type="button" class="btn btn-primary">Potvrdi</button>
-      </div>
+
     </div>
   </div>
 </div>
