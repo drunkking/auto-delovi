@@ -8,10 +8,8 @@ function lo_profit(){
             var myObj = JSON.parse(this.responseText);
         
             var br = myObj['prof'];
+            var br = Math.round(br * 100) / 100;
 
-  
-            console.log(myObj);
-            
 
             document.getElementById("profit").innerHTML = br;
         }

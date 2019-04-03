@@ -22,7 +22,10 @@
 
       <!-- /.col-lg-3 end-->
 
-      <div class="col-lg-8">
+      <div class="col-lg-8 main">
+      <?php require_once("template/prodavnica/search_bar.php"); ?>
+
+
       <?php require_once("template/includes/data/prodavnica/index_slide.php"); ?>
 
           <!-- slidebar -->

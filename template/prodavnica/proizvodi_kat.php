@@ -14,7 +14,7 @@
 
        
 
-      <div id="kategorija" class="list-group my-4" >
+      <div id="kategorija"  class="list-group my-4" >
 
       </div>
 
@@ -23,7 +23,9 @@
 
       <!-- /.col-lg-3 end-->
 
-      <div class="col-lg-8">
+      <div  class="col-lg-8 main">
+
+      <?php require_once("search_bar.php"); ?>
 
        <!-- slidebar -->
        <?php require_once("index_slide.php"); ?>

@@ -9,6 +9,7 @@ $proizvod = new Proizvod();
 
 $profit = $proizvod->return_profit();
 
+
 $profit_json = json_encode($profit);
 
 

@@ -14,11 +14,21 @@
                 <div class="col-lg-12">
                     <form action="../../src/includes/prijava_korisnika.php" method="post">
                       <div class="form-group">
+                      <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fas fa-user"></i></div>
+                        </div>
                         <input type="text" class="form-control" name="kor_ime_l" placeholder="Korisničko ime">
+                          </div>
                       </div>
 
                       <div class="form-group">
-                        <input type="text" class="form-control" name="sifra_l" placeholder="Šifra">
+                      <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fas fa-key"></i></div>
+                        </div>
+                        <input type="password" class="form-control" name="sifra_l" placeholder="Šifra">
+                        </div>
                       </div>
 
                       <div class="form-group">

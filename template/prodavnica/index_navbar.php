@@ -8,9 +8,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="../admin/admin.php">ADMIN TEST</a>
-          </li>
+
 
           <?php
 
@@ -20,7 +18,7 @@
                 if($_SESSION['admin'] == $spec){
                 
                   echo " <li class='nav-item'>
-                          <a href='../admin/admin.php' class='nav-link' >Profil</a>
+                          <a href='../admin/admin.php' class='nav-link' >Profil <i class='far fa-user-circle'></i></a>
                         </li>
                         <li class='nav-item'>
                           <a class='nav-link' href='#'  data-toggle='modal' data-target='#exampleModal'>
@@ -34,7 +32,7 @@
                 if($_SESSION['user'] == $spec){
 
                   echo " <li class='nav-item'>
-                          <a href='../user/user.php' class='nav-link' >Profil</a>
+                          <a href='../user/user.php' class='nav-link' >Profil <i class='far fa-user-circle'></i></a>
                         </li>
                         <li class='nav-item'>
                         <a class='nav-link' href='#'  data-toggle='modal' data-target='#exampleModal'>

@@ -16,7 +16,7 @@
                       if($_SESSION['admin'] == $spec){
                       
                         echo " <li class='nav-item'>
-                                <a href='template/admin/admin.php' class='nav-link' >Profil</a>
+                                <a href='template/admin/admin.php' class='nav-link' >Profil <i class='far fa-user-circle'></i></a>
                               </li>";
                         }
                     } else if(isset($_SESSION['user'])){
