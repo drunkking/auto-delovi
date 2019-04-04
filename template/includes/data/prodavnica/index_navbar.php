@@ -25,16 +25,16 @@
                       if($_SESSION['user'] == $spec){
 
                         echo " <li class='nav-item'>
-                                <a href='template/user/user.php' class='nav-link' >Profil</a>
+                                <a href='template/user/user.php' class='nav-link' >Profil <i class='far fa-user-circle'></i></a>
                               </li>";
                       }
                     } else {
                         echo '
                             <li class="nav-item">
-                              <a class="nav-link" data-toggle="modal" data-target="#LoginModal" href="#">Prijavi se</a>
+                              <a class="nav-link" data-toggle="modal" data-target="#LoginModal" href="#">Prijavi se <i class="fas fa-door-open"></i></a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" data-toggle="modal" data-target="#RegiModal" href="#">Registruj se</a>
+                              <a class="nav-link" data-toggle="modal" data-target="#RegiModal" href="#">Registruj se <i class="fas fa-dna"></i></a>
                             </li>';
                     }
               ?>

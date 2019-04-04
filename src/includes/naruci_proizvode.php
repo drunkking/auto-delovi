@@ -1,4 +1,5 @@
 <?php require_once("../class/Narudzbenica.php"); ?>
+<?php require_once("../class/Korisnik.php"); ?>
 <?php 
 session_start();
 
@@ -10,9 +11,6 @@ session_start();
 <?php
 header("Content-Type: application/json; charset=UTF-8");
 
-function generateRandomString($length = 10) {
-    return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
-}
 
 
 
@@ -75,9 +73,13 @@ if(!empty($_POST["proizvod"])){
     $today = date("Y-m-d");
     $narudz = new Narudzbenica();
     $num = $_SESSION['token'];
+    $korisnicko_ime = $_SESSION['spec'];
 
-    
-    $narudz->set_narudzbenica($today, 1, $num);
+    $korisnik = new Korisnik();
+    $sifra_korisnika = $korisnik->korisnik_korime($korisnicko_ime);
+
+
+    $narudz->set_narudzbenica($today, $sifra_korisnika['sifra_korisnika'], $num);
     $narudz->insert_narudzbenica();
     $narudz->set_sifra_narudzbenice();
     

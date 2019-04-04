@@ -259,6 +259,20 @@ public function return_korisnik_id($sifra){
     return $result;
 }
 
+public function korisnik_korime($korisnicko_ime){
+
+
+    $select_query = $this->set_query("SELECT sifra_korisnika
+        FROM korisnik 
+        WHERE korisnicko_ime = '$korisnicko_ime' ");
+
+    while($row = $select_query->fetch_assoc()) {
+        $result = $row;
+    }
+
+    return $result;
+}
+
 
 public function delete_korisnik_id($sifra){
 
