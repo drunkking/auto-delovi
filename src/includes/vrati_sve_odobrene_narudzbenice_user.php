@@ -11,10 +11,11 @@ $korisnik = new Korisnik();
 $kor_ime = $_SESSION['spec'];
 $sifra_korisnika = $korisnik->korisnik_korime($kor_ime);
 
-$sve_narudzbenice_user = $narudzbenica->all_narudzbenica_user($sifra_korisnika['sifra_korisnika']);
-$narudzbenica_user_json = json_encode($sve_narudzbenice_user);
+$sve_narudzbenice = $narudzbenica->odobrena_narudzbenica_user($sifra_korisnika['sifra_korisnika']);
+$narudzbenica_json = json_encode($sve_narudzbenice);
 
-echo $narudzbenica_user_json;
+
+echo $narudzbenica_json;
 
 
 ?>

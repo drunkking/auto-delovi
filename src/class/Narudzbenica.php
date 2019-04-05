@@ -72,12 +72,18 @@ class Narudzbenica extends Database {
         return $result;
     }
 
-    public function all_narudzbenic_user($sifra_korisnika){
+    public function all_narudzbenica_user($sifra_korisnika){
 
         $result = array();
 
         $select_query = $this->set_query("SELECT * FROM narudzbenica
             WHERE sifra_korisnika = $sifra_korisnika");
+        
+        while($row = $select_query->fetch_assoc()){
+            $result[] = $row;
+        }
+
+        return $result;
     }
 
     public function  odobrena_narudzbenica(){
@@ -93,6 +99,22 @@ class Narudzbenica extends Database {
 
         return $result;
     }
+
+    public function  odobrena_narudzbenica_user($sifra_korisnika){
+
+        $result = array();
+
+        $select_query = $this->set_query("SELECT * FROM narudzbenica
+                    WHERE stat = 1 
+                    AND sifra_korisnika = $sifra_korisnika");
+
+        while($row = $select_query->fetch_assoc()){
+            $result[] = $row;
+        }
+
+        return $result;
+    }
+
 
 
 

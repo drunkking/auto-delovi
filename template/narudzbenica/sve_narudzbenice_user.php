@@ -1,6 +1,6 @@
 <?php require_once("../includes/data/header_nav.php"); ?>
 
-<body onload="lo_narudzbenica();">
+<body onload="lo_narudzbenica_user();">
 
 
     <!-- Navbar-->
@@ -64,7 +64,6 @@
                           <th>Šifra</th>
                           <th>Datum naručivanja</th>
                           <th>Stavka narudzbenice</th>
-                          <th>Odobri</th>
                           <th>Obriši</th>
                         </tr>
                       </thead>
@@ -82,7 +81,7 @@
 
   </div>
   <!-- wrapper -->
-  <script src="js/load_narudzbenica.js"></script>
+  <script src="js/load_narudzbenica_user.js"></script>
   <script src="js/load_stavka_narudzbenice.js"></script>
   <script src="js/odobri_narudzbenicu.js"></script>
 
