@@ -165,6 +165,23 @@ class Proizvod extends Database {
     }
 
 
+    public function trazeno($sifra_kategorije, $data){
+
+        $result = array();
+
+        $select_query = $this->set_query("SELECT *
+            FROM proizvod
+            WHERE sifra_kategorije = $sifra_kategorije 
+            AND  naziv LIKE '%$data%'");
+
+        while($row = $select_query->fetch_assoc()){
+            $result[] = $row;
+        }
+
+        return $result;
+    }
+
+
     
     public function odobri_proizvod($sifra_proizvoda, $kolicina){
 
@@ -182,11 +199,11 @@ class Proizvod extends Database {
 
 
         // AZURIRAJ PROFIFT 
-        //zaradjujem 17% od vrednosti proizvoda sa pdv-om
+        //zaradjujem 38% od vrednosti proizvoda sa pdv-om
 
         $cena_proizvoda = $this->cena_proizvoda_id($sifra_proizvoda);
 
-        $profit = $kolicina * ($cena_proizvoda['cena'] * 0.17);
+        $profit = $kolicina * ($cena_proizvoda['cena'] * 0.38);
 
         $insert_query = $this->prepare_query("INSERT INTO racun(
             profit)
@@ -247,6 +264,7 @@ class Proizvod extends Database {
 
 
 }
+
 
 
 

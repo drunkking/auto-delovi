@@ -21,7 +21,6 @@ function submit_korisnik(){
 
 
 
-
     var korisnik_obj = {
         "ime": ime,
         "prezime": prezime,
@@ -41,7 +40,7 @@ function submit_korisnik(){
     xmlhttp = new XMLHttpRequest();
     korisnik_obj_json = JSON.stringify(korisnik_obj);
 
-    xmlhttp.onreadystatechante = function(){
+    xmlhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
            
             console.log(this.responseTest);

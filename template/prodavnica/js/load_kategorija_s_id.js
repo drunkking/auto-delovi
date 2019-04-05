@@ -1,5 +1,4 @@
-
-function li_kategorija() {
+function se_kat() {
 
     var xmlhttp = new XMLHttpRequest();
 
@@ -11,26 +10,25 @@ function li_kategorija() {
             var row = "";
             var naziv;
 
+            row +="<option value='0'>Traži sve</option>";
+
             for(var i = 0; i < myObj.length; i++) {
 
-                naziv = myObj[i]['naziv'];
-                row += "<a href='template/prodavnica/proizvodi_kat.php?data="+ myObj[i]['sifra_kategorije'] +"'  class='list-group-item kat'>" + naziv.toUpperCase(); + "</a>";
+               naziv = myObj[i]['naziv'];
+               row += "<option value='"+ myObj[i]['sifra_kategorije'] +"'>" + naziv + "</option>";
+              
             }
 
-            document.getElementById("kategorija").innerHTML = row;
-        }
-
-
+            document.getElementById("s_kat").innerHTML = row;
         
     };
 
-    xmlhttp.open("POST", "../auto_delovi/src/includes/vrati_sve_kategorije.php", true);
+
+    }
+    
+    xmlhttp.open("POST", "../../src/includes/vrati_sve_kategorije.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send();
 
 }
-
-
-
-
 

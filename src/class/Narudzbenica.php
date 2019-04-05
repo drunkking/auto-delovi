@@ -77,7 +77,8 @@ class Narudzbenica extends Database {
         $result = array();
 
         $select_query = $this->set_query("SELECT * FROM narudzbenica
-            WHERE sifra_korisnika = $sifra_korisnika");
+            WHERE sifra_korisnika = $sifra_korisnika
+            AND stat = 0");
         
         while($row = $select_query->fetch_assoc()){
             $result[] = $row;

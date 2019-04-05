@@ -44,7 +44,7 @@ function lo_proizvod(sifra) {
 
            } else {
 
-            row += "<div class='col-lg-12 text-center'>";
+             row += "<div class='col-lg-12 text-center'>";
              row += "<div class='alert alert-warning' role='alert'><h3>Nema proizvoda u ovoj kategoriji</h3></div>";
              row += "</div>";
 

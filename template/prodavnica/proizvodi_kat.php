@@ -1,6 +1,6 @@
 <?php require_once("index_header.php"); ?>
 
-<body onload="li_kategorija();lo_proizvod(<?php echo $_GET['data']; ?>);">
+<body onload="li_kategorija();lo_proizvod(<?php echo $_GET['data']; ?>);se_kat();">
 
   <!-- Navigation -->
       <?php require_once("index_navbar.php"); ?>
@@ -60,9 +60,12 @@
   <!-- /.container -->
 
   <script src="js/load_kategorija_id.js"></script>
+  <script src="js/load_kategorija_s_id.js"></script>
+  <script src="js/search_proizvodi.js"></script>
   <script src="js/load_proizvod_id.js"></script>
   <script src="js/app.js"></script>
   <script src="js/naruci_proizvode.js"></script>
+  
 
   <!-- Footer -->
   <?php require_once("index_footer.php"); ?>
