@@ -8,7 +8,7 @@
   <!-- Page Content -->
   <div class="container-fluid">
 
-    <div class="row page">
+    <div class="row data page">
 
     <div class="col-lg-2 text-center">
    
@@ -30,13 +30,14 @@
 
           <!-- slidebar -->
    
-          <div class="container-fluid">
+          <div class="container-fluid"  id="data">
 
-            <div class="row my-4 text-center">
+        
+          <div class="row my-4 text-center">
                 <!-- data -->
                   <div class="col-lg-4 col-md-4 kartica">
                     <div class="card" >
-                      <img src="img/audi.jpg" class="card-img-top img-fluid" alt="...">
+                      <img src="img/audi.jpg" class="card-img-top " alt="...">
                       <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                       </div>
@@ -45,7 +46,7 @@
 
                   <div class="col-lg-4 col-md-4 kartica">
                     <div class="card" >
-                      <img src="img/benz.png" class="card-img-top img-fluid" alt="...">
+                      <img src="img/benz.png" class="card-img-top " alt="...">
                       <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                       </div>
@@ -67,7 +68,7 @@
                 <!-- data -->
                 <div class="col-lg-4 col-md-4 kartica">
                     <div class="card">
-                      <img src="img/leksus.png" class="card-img-top img-fluid" alt="...">
+                      <img src="img/leksus.png" class="card-img-top " alt="...">
                       <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                       </div>
@@ -76,7 +77,7 @@
 
                   <div class="col-lg-4 col-md-4 kartica">
                     <div class="card">
-                      <img src="img/lada.jpg" class="card-img-top img-fluid" alt="...">
+                      <img src="img/lada.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                       </div>
@@ -93,19 +94,18 @@
                     </div>  
              </div>
 
+             
+
         </div>
         <!-- /.row -->
 
         </div>
         <!-- end col-6-->
 
-        <div class="col-lg-2" >
+        <div class="col-lg-2 " >
 
 
         <div class="list-group my-4">
-
-  
-
 
         </div>
 

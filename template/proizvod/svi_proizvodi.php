@@ -20,7 +20,7 @@
                 <div class="col-lg-12">
                     <h1 class="pt-4 text-center">Svi proizvodi</h1>
 
-                    <table class="table table-hover text-center">
+                    <table class="table table-responsive-lg text-center">
                       <thead>
                         <tr>
                           <th>Šifra</th>

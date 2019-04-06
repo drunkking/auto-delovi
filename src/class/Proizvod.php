@@ -106,6 +106,24 @@ class Proizvod extends Database {
         
     }
 
+    public function all_proizvod_s($data){
+
+        $result = array();
+
+        $select_query = $this->set_query("SELECT * FROM proizvod
+            WHERE naziv LIKE '%$data%'");
+
+        while($row = $select_query->fetch_assoc()){
+            $result[] = $row;
+        }
+
+        return $result;
+        
+    }
+
+
+
+
     public function update_proizvod_id($sifra){
 
         $update_query = $this->prepare_query("UPDATE proizvod SET

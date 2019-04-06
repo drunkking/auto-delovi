@@ -24,7 +24,7 @@ function trazi_proizvod() {
 
                     row += "<div class='col-lg-3 col-md-4 col-md-6  mb-4'>";
                     row += "<div class='card h-100 pro'>";
-                    row += "<a href='#'><img class='card-img-top' height='200' width='200' src='template/proizvod/images/" + myObj[i]['slika'] + "' alt=''></a>";
+                    row += "<a href='#'><img class='card-img-top' height='200' width='200' src='../../template/proizvod/images/" + myObj[i]['slika'] + "' alt=''></a>";
                     row += "<div class='card-body'>";
                     row += "<h4 class='card-title'>";
                     row += "<a href='#' id='naziv_p'>"+ myObj[i]['naziv']+"</a>";
@@ -40,7 +40,7 @@ function trazi_proizvod() {
                 }
             } else {
                     row += "<div class='col-lg-12 text-center'>";
-                    row += "<div class='alert alert-primary' role='alert' ><h3>Nema traženih proizvoda</h3></div>";
+                    row += "<div class='alert alert-primary' role='alert'><h3>Nema traženih proizvoda</h3></div>";
                     row += "</div>";
 
             }
@@ -50,7 +50,7 @@ function trazi_proizvod() {
         }
     };
 
-    xmlhttp.open("POST","../auto_delovi/src/includes/vrati_trazene_proizvode.php", true);
+    xmlhttp.open("POST","../../src/includes/vrati_trazene_proizvode.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("trazi="+data_obj_json);
 

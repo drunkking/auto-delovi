@@ -9,9 +9,19 @@ if(!empty($_POST["trazi"])){
 
     $proizvod = new Proizvod();
 
+    if($data_obj->sifra_kategorije == 0){
+
+        $trazeni_proizvodi = $proizvod->all_proizvod_s($data_obj->data);
+
+    } else {
+
+        
     $trazeni_proizvodi = $proizvod->trazeno(
         $data_obj->sifra_kategorije,   //sifra odabrane kategorije
         $data_obj->data);              //podaci za pretragu
+
+    }
+
 
     
     echo json_encode($trazeni_proizvodi);

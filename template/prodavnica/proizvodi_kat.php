@@ -61,7 +61,7 @@
 
   <script src="js/load_kategorija_id.js"></script>
   <script src="js/load_kategorija_s_id.js"></script>
-  <script src="js/search_proizvodi.js"></script>
+  <script src="js/search_proizvodi_id.js"></script>
   <script src="js/load_proizvod_id.js"></script>
   <script src="js/app.js"></script>
   <script src="js/naruci_proizvode.js"></script>
