@@ -69,3 +69,10 @@ CREATE TABLE racun (
     vreme TIMESTAMP,
     PRIMARY KEY(sifra)
 );
+
+CREATE TABLE reklamacija (
+    sifra_reklamacije INTEGER NOT NULL AUTO_INCREMENT,
+    email VARCHAR(255) NOT NULL,
+    poruka VARCHAR(255),
+    PRIMARY KEY(sifra)
+);
