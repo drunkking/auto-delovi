@@ -16,7 +16,7 @@ function trazi_proizvod() {
         if(this.readyState == 4 && this.status == 200){
 
             var myObj = JSON.parse(this.responseText);
-            var row = "";
+            var row = "<div class='row my-4 text-center'>";
 
             if(myObj.length > 0){
 
@@ -45,6 +45,7 @@ function trazi_proizvod() {
 
             }
 
+            row+="</div>";
             document.getElementById("data").innerHTML = row;
            
         }

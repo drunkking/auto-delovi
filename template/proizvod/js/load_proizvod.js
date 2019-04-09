@@ -19,8 +19,8 @@ function table_proizvod() {
                 row += "<td>" + myObj[i]['cena'] + "</td>";
                 row += "<td>" + myObj[i]['naziv_kategorije'] + "</td>";
                 row += "<td>" + myObj[i]['stanje'] + "</td>";
-                row += "<td>" + "<a href='proizvod.php?data="+ myObj[i]['sifra_proizvoda'] +"'><button type='button' class='btn btn-warning'>Izmeni</button>" + "</a></td>";
-                row += "<td>" + "<button type='button' class='btn btn-danger' onclick='del_proizvod("+ myObj[i]['sifra_proizvoda'] +")' >Obriši</button>" + "</td>";
+                row += "<td>" + "<a href='proizvod.php?data="+ myObj[i]['sifra_proizvoda'] +"'><button type='button' class='btn btn-warning fas fa-edit'></button>" + "</a></td>";
+                row += "<td>" + "<button type='button' class='btn btn-danger fas fa-trash-alt' onclick='del_proizvod("+ myObj[i]['sifra_proizvoda'] +")' ></button>" + "</td>";
                 row += "</tr>";
             }
 

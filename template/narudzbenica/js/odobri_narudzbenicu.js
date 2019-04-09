@@ -14,9 +14,9 @@ function lo_narudzbenica(){
                 row += "<tr>";
                 row += "<td>" + myObj[i]['sifra_narudzbenice'] + "</td>";
                 row += "<td>" + myObj[i]['datum_narucivanja'] + "</td>";
-                row += "<td>" + "<button type='button' onclick='lo_stavka(" + myObj[i]['sifra_narudzbenice'] + ")' class='btn btn-warning' data-toggle='modal' data-target='#StavkaModal'>" + "Detaljnije" +"</button>"+ "</td>";
-                row += "<td>" + "<button type='button' class='btn btn-success' onclick='odobri("+ myObj[i]['sifra_narudzbenice'] +");'>Odobri</button>"+ "</td>";
-                row += "<td>" + "<button type='button' class='btn btn-danger' onclick='' >Obriši</button>" + "</td>";
+                row += "<td>" + "<button type='button' onclick='lo_stavka(" + myObj[i]['sifra_narudzbenice'] + ")' class='btn btn-warning fas fa-list-ul' data-toggle='modal' data-target='#StavkaModal'>" +"</button>"+ "</td>";
+                row += "<td>" + "<button type='button' class='btn btn-success far fa-arrow-alt-circle-up' onclick='odobri("+ myObj[i]['sifra_narudzbenice'] +");'></button>"+ "</td>";
+                row += "<td>" + "<button type='button' class='btn btn-danger fas fa-trash-alt' onclick='' ></button>" + "</td>";
                 row += "</tr>";
 
             }

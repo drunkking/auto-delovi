@@ -65,6 +65,18 @@
             </div>
         </div>
 
+        <!-- Reklamacije-->
+        <div class="dropdown">
+        
+        <a class="list-group-item list-group-item-action bg-light"  id="dropdownMenu"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-bug"></i> Reklamacije
+        </a>
+        
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                <a class="dropdown-item" href="../reklamacija/sve_reklamacije.php">Sve reklamacije</a>
+            </div>
+        </div>
+
 
         <!-- Profil-->
         <div class="dropdown">

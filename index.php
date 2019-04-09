@@ -94,6 +94,7 @@
                     </div>  
              </div>
 
+              
              
 
         </div>
@@ -115,6 +116,8 @@
     </div>
     <!-- /.row -->
 
+
+
   </div>
   <!-- /.container -->
 
@@ -124,6 +127,7 @@
   <script src="template/prodavnica/js/search_proizvodi.js"></script>
   <script src="template/prodavnica/js/app.js"></script>
   <script src="template/prodavnica/js/naruci_proizvode.js"></script>
+
   
   
   <!-- Footer -->

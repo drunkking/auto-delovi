@@ -39,6 +39,8 @@
         </div>
         <!-- /.row -->
 
+        <?php require_once("../includes/data/prodavnica/reklamacija_1.php"); ?>
+
           </div>
         <!-- end col-6-->
 
@@ -52,6 +54,7 @@
 
 
       </div>
+      
 
     </div>
     <!-- /.row -->
@@ -65,7 +68,7 @@
   <script src="js/load_proizvod_id.js"></script>
   <script src="js/app.js"></script>
   <script src="js/naruci_proizvode.js"></script>
-  
+
 
   <!-- Footer -->
   <?php require_once("index_footer.php"); ?>

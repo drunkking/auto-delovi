@@ -14,7 +14,7 @@ function table_kategorija(){
                 row += "<tr>";
                 row += "<td>" + myObj[i]['sifra_kategorije'] + "</td>";
                 row += "<td>" + myObj[i]['naziv'] + "</td>";
-                row += "<td>" + "<button type='button' class='btn btn-danger' onclick='del_kategorija("+ myObj[i]['sifra_kategorije'] +")' >Obriši</button>" + "</td>";
+                row += "<td>" + "<button type='button' class='btn btn-danger fas fa-trash-alt' onclick='del_kategorija("+ myObj[i]['sifra_kategorije'] +")' ></button>" + "</td>";
                 row += "</tr>";
             }
 

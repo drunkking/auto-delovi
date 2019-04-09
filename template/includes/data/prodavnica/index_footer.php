@@ -1,6 +1,11 @@
 <footer class="py-5 bg-dark">
     <div class="container">
+     
+       <div class="row">
+       <div class="col-lg-12">
       <p class="m-0 text-center text-white">Copyright &copy; Dusan Kuburic 2019</p>
+      </div>
+       </div>
     </div>
     <!-- /.container -->
   </footer>

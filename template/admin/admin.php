@@ -15,7 +15,7 @@
 
     <title>Dashboard</title>
   </head>
-  <body onload="lo_profit();br_odobrenih();br_na_cekanju();">
+  <body onload="lo_profit();br_odobrenih();br_na_cekanju();br_reklam();">
 
 
     <!-- Navbar-->
@@ -103,6 +103,19 @@
             </div>
         </div>
 
+        <!-- Reklamacije-->
+        <div class="dropdown">
+        
+        <a class="list-group-item list-group-item-action bg-light"  id="dropdownMenu"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-bug"></i> Reklamacije
+        </a>
+        
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                <a class="dropdown-item" href="../reklamacija/sve_reklamacije.php">Sve reklamacije</a>
+            </div>
+        </div>
+       
+
 
         <!-- Profil-->
         <div class="dropdown">
@@ -174,7 +187,7 @@
                   <div class="card-header text-center"><h4>Reklamacije</h4></div>
                   <div class="card-body">
                     <h5 class="card-title">Broj:</h5>
-                    <h1 class="card-text">0</h1>
+                    <h1 class="card-text" id="reklam">0</h1>
                   </div>
                 </div>
 
@@ -201,6 +214,7 @@
 
     <script src="js/broj_odobrenih.js"></script>
     <script src="js/broj_na_cekanju.js"></script>
+    <script src="js/broj_reklamacija.js"></script>
     <script src="js/load_profit.js"></script>
 
 

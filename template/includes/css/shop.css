@@ -32,14 +32,19 @@ button.kat:hover {
     background-color: #E4EBF0;
 }
 
-
+.pom {
+    font-size: 17px;
+    font-weight: 700;
+}
 
 
 .set {
     background-color: #BCDAF0;
 }
 
-
+.reklamacija {
+    background-color: #CB4335;
+}
 
 .page {
     background-color:#AFC0DD;  

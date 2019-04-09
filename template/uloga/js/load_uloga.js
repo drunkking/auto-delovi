@@ -13,7 +13,7 @@ function table_uloga(){
                 row +="<tr>";
                 row +="<td>" + myObj[i]['sifra_uloge'] +"</td>";
                 row +="<td>" + myObj[i]['naziv'] +"</td>";
-                row += "<td>" + "<button type='button' class='btn btn-danger' onclick='del_uloga("+ myObj[i]['sifra_uloge'] +")' >Obriši</button>" + "</td>";
+                row += "<td>" + "<button type='button' class='btn btn-danger fas fa-trash-alt' onclick='del_uloga("+ myObj[i]['sifra_uloge'] +")' ></button>" + "</td>";
                 row +="</tr>";
             }
 

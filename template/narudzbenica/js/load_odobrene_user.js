@@ -13,8 +13,8 @@ function lo_odobrena_narudzbenica_user(){
                 row += "<tr>";
                 row += "<td>" + myObj[i]['sifra_narudzbenice'] + "</td>";
                 row += "<td>" + myObj[i]['datum_narucivanja'] + "</td>";
-                row += "<td>" + "<button type='button' onclick='lo_stavka(" + myObj[i]['sifra_narudzbenice'] + ");' class='btn btn-warning' data-toggle='modal' data-target='#StavkaModal'>" + "Detaljnije" +"</button>"+ "</td>";
-                row += "<td>" + "<button type='button' class='btn btn-danger' onclick='' >Obriši</button>" + "</td>";
+                row += "<td>" + "<button type='button' onclick='lo_stavka(" + myObj[i]['sifra_narudzbenice'] + ");' class='btn btn-warning fas fa-list-ul' data-toggle='modal' data-target='#StavkaModal'></button></td>";
+                row += "<td>" + "<button type='button' class='btn btn-danger fas fa-trash-alt' onclick='' ></button></td>";
                 row += "</tr>";
 
             }

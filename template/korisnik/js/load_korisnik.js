@@ -22,9 +22,14 @@ function table_korisnik(){
                 row += "<td>" + myObj[i]['email'] + "</td>";
                 row += "<td>" + myObj[i]['sifra'] + "</td>";
                 row += "<td>" + myObj[i]['pol'] + "</td>";
-                row += "<td>" + myObj[i]['naziv_uloge'] + "</td>";
-                row += "<td>" + "<a href='korisnik.php?data="+ myObj[i]['sifra_korisnika'] +"'><button type='button' class='btn btn-warning'>Izmeni</button>" + "</a></td>";
-                row += "<td>" + "<button type='button' class='btn btn-danger' onclick='del_korisnik("+ myObj[i]['sifra_korisnika'] +")' >Obriši</button>" + "</td>";
+
+                if(myObj[i]['naziv_uloge'] == 'Admin'){
+                row += "<td><span class='badge badge-success'>" + myObj[i]['naziv_uloge'] + "</span></td>";
+                } else {
+                row += "<td><span class='badge badge-danger'>" + myObj[i]['naziv_uloge'] + "</span></td>";
+                }
+                row += "<td>" + "<a href='korisnik.php?data="+ myObj[i]['sifra_korisnika'] +"'><button type='button' class='btn btn-warning fas fa-edit'></button>" + "</a></td>";
+                row += "<td>" + "<button type='button' class='btn btn-danger fas fa-trash-alt' onclick='del_korisnik("+ myObj[i]['sifra_korisnika'] +")' ></button>" + "</td>";
                 row += "</tr>";
             }
 
