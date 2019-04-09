@@ -24,16 +24,11 @@
                     </thead>
                     <tbody id="korpa">
 
-                    </tbody>
-
+                   </tbody>
                 </table>
-
-
                 </div>
               </div>
          </div>
-
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" id="brisi" onclick="ocistiKorpu();" data-dismiss="modal">Obustavi</button>

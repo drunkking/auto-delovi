@@ -1,6 +1,6 @@
 <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Dusan Kuburic 2019</p>
+      <p class="m-0 text-center" style="color:#00FF00;">Copyright &copy; Dusan Kuburic 2019</p>
     </div>
     <!-- /.container -->
   </footer>

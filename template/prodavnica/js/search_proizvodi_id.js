@@ -16,7 +16,7 @@ function trazi_proizvod() {
         if(this.readyState == 4 && this.status == 200){
 
             var myObj = JSON.parse(this.responseText);
-            var row = "";
+            var row = "<div class='row my-4'>";
 
             if(myObj.length > 0){
 
@@ -34,16 +34,18 @@ function trazi_proizvod() {
                     row += "<label>Za vozila:</label>";
                     row += " <p class='card-text'>" + myObj[i]['za_vozila'] +"</p>";
                     row += "</div>";
-                    row += "<button class='dodaj_u_korpu btn btn-primary kat' data-id='" +  myObj[i]['sifra_proizvoda'] + "'>DODAJ U KORPU</button>";
+                    row += "<button class='dodaj_u_korpu btn kat' data-id='" +  myObj[i]['sifra_proizvoda'] + "'>DODAJ U KORPU</button>";
                     row += "</div>";
                     row += "</div>";
                 }
             } else {
-                    row += "<div class='col-lg-12 text-center'>";
+                    row += "<div class='col-lg-12 text-center p-4 mb-4'>";
                     row += "<div class='alert alert-primary' role='alert'><h3>Nema traženih proizvoda</h3></div>";
                     row += "</div>";
 
             }
+
+            row+="</div>";
 
             document.getElementById("data").innerHTML = row;
            

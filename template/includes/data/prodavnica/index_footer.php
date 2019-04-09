@@ -3,7 +3,7 @@
      
        <div class="row">
        <div class="col-lg-12">
-      <p class="m-0 text-center text-white">Copyright &copy; Dusan Kuburic 2019</p>
+      <p class="m-0 text-center " style="color:#00FF00;">Copyright &copy; Dusan Kuburic 2019</p>
       </div>
        </div>
     </div>

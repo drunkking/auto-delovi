@@ -8,56 +8,28 @@
   <!-- Page Content -->
   <div class="container-fluid">
 
-    <div class="row page">
+        <div class="row blok1">
+            <div class="col-lg-2 text-center" >
+              <div id="kategorija"  class="list-group my-4"></div>
+            </div>
 
-    <div class="col-lg-2 text-center" >
+              <div class="col-lg-8 text-center my-3">
+                  <?php require_once("search_bar.php"); ?>
+                  <?php require_once("index_slide.php"); ?>
+               </div>
+              
 
-       
-
-      <div id="kategorija"  class="list-group my-4" >
-
-      </div>
-
-      </div>
-
-
-      <!-- /.col-lg-3 end-->
-
-      <div  class="col-lg-8 main">
-
-      <?php require_once("search_bar.php"); ?>
-
-       <!-- slidebar -->
-       <?php require_once("index_slide.php"); ?>
-
-
-        <div class="row" id="data">
-
-         <!-- data -->
-       
-
+              <div class="col-lg-2"></div>
         </div>
-        <!-- /.row -->
+            <!-- /.row -->
 
-        <?php require_once("../includes/data/prodavnica/reklamacija_1.php"); ?>
-
+      <div class="row justify-content-center blok2">
+        <div class="col-lg-8" >
+          <div class="container-fluid"  id="data"></div> 
           </div>
-        <!-- end col-6-->
-
-        <div class="col-lg-2">
-
-        <div class="list-group my-4">
-
-  
-
-        </div>
-
-
-      </div>
-      
-
-    </div>
-    <!-- /.row -->
+       </div>
+    
+       <?php require_once("../includes/data/prodavnica/reklamacija_1.php"); ?>
 
   </div>
   <!-- /.container -->
