@@ -1,6 +1,6 @@
 <?php require_once("../includes/data/header_nav.php"); ?>
 
-<body onload="load_p(<?php echo $_GET['data']; ?>);lo_kategorije();">
+<body onload="load_p(<?php echo $_GET['data']; ?>);">
 
 
 <!-- Navbar-->
@@ -81,7 +81,7 @@
 
       <script src="js/load_proizvod_id.js"></script>
       <script src="js/update_proizvod.js"></script>
-      <script src="js/load_kategorije.js"></script>
+    
 
 
   <?php require_once("../includes/data/footer.php"); ?>
