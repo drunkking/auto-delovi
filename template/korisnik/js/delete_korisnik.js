@@ -16,7 +16,9 @@ function del_korisnik(sifra){
             var myObj = JSON.parse(this.responseText);
             var row = "";
 
-            console.log(korisnik_obj_json);
+          
+
+            
 
             for(var i = 0; i < myObj.length; i++){
 

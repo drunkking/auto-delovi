@@ -133,8 +133,7 @@ class Narudzbenica extends Database {
 
     
     public function set_sifra_narudzbenice(){
-
-       
+     
         $sif = $this->sifra_interna;
 
         $select_sifra = $this->set_query("SELECT sifra_narudzbenice 
@@ -167,7 +166,6 @@ class Narudzbenica extends Database {
 
     public function stavke($sifra_narudzbenice){
 
-
         $result = array();
 
         $select_query = $this->set_query("SELECT * FROM stavka_narudzbenice 
@@ -181,6 +179,8 @@ class Narudzbenica extends Database {
 
     }
 
+
+
     public function odobri_narudzbenicu($sifra_narudzbenice){
 
         $update_query = $this->prepare_query("UPDATE narudzbenica SET
@@ -193,7 +193,23 @@ class Narudzbenica extends Database {
          $update_query->execute();
     }
 
+    public function delete_narudzbenica_id($sifra_narudzbenice){
+
+        $query = $this->set_query("SET foreign_key_checks = 0");
+
+        $delete_query = $this->prepare_query("DELETE 
+            FROM narudzbenica
+            WHERE sifra_narudzbenice = (?)");
+
+        $delete_query->bind_param("i", $sifra_narudzbenice);
+
+        $delete_query->execute();
+
+        $query = $this->set_query("SET foreign_key_checks = 1");
+    }
+
 }
+
 
 
 

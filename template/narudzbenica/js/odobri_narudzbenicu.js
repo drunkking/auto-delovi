@@ -17,7 +17,7 @@ function lo_narudzbenica(){
                 row += "<td>" + "<button type='button' onclick='lo_stavka(" + myObj[i]['sifra_narudzbenice'] + ")' class='btn btn-warning fas fa-list-ul' data-toggle='modal' data-target='#StavkaModal'>" +"</button>"+ "</td>";
                 row += "<td>" + "<button type='button' onclick='lo_kupac(" + myObj[i]['sifra_korisnika'] + ")' class='btn btn-info fas fa-user-tag' data-toggle='modal' data-target='#KupacModal'>" +"</button>"+ "</td>";
                 row += "<td>" + "<button type='button' class='btn btn-success far fa-arrow-alt-circle-up' onclick='odobri("+ myObj[i]['sifra_narudzbenice'] +");'></button>"+ "</td>";
-                row += "<td>" + "<button type='button' class='btn btn-danger fas fa-trash-alt' onclick='' ></button>" + "</td>";
+                row += "<td>" + "<button type='button' class='btn btn-danger fas fa-trash-alt' onclick='del_narudz("+ myObj[i]['sifra_narudzbenice'] +")' ></button>" + "</td>";
                 row += "</tr>";
 
             }
