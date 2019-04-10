@@ -15,7 +15,7 @@ function lo_proizvod() {
               row += "<img class='card-img-top' height='200' width='200' src='template/proizvod/images/" + myObj[i]['slika'] + "' alt=''>";
               row += "<div class='card-body'>";
               row += "<h4 class='card-title'>";
-              row += "<a href='#' id='naziv_p'>"+ myObj[i]['naziv']+"</a>";
+              row += "<a id='naziv_p'>"+ myObj[i]['naziv']+"</a>";
               row += "</h4>";
               row += "<label>Cena: <small>RSD</small></label>";
               row += "<h5 id='cena_p'>" + myObj[i]['cena'] + "</h5>";

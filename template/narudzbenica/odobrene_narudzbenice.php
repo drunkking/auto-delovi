@@ -55,6 +55,7 @@
                           <th>Šifra</th>
                           <th>Datum naručivanja</th>
                           <th>Stavka narudzbenice</th>
+                          <th>Podaci o kupcu</th>
                           <th>Obriši</th>
                         </tr>
                       </thead>
@@ -73,6 +74,7 @@
   </div>
   <!-- wrapper -->
   <script src="js/load_odobrene.js"></script>
+  <script src="js/load_podaci_kupca.js"></script>
   <script src="js/load_stavka_narudzbenice.js"></script>
 
   <!-- Stavka  Modal -->
@@ -119,6 +121,43 @@
   </div>
 </div>
 
+  <!-- Kupac Modal -->
+  <div class="modal fade" id="KupacModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Kupac</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+              <div class="container">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <table class="table text-center">
+                            <thead>
+                              <tr>
+                                <th>Ime i Prezime</th>
+                                <th>Korisničko ime</th>
+                                <th>Email</th>
+                              </tr>
+                            </thead>
+                            <tbody id="kupac"></tbody>
+                        </table>
+                        </div>
+                      </div>
+                </div>
+          </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
   <?php require_once("../includes/data/footer.php"); ?>
