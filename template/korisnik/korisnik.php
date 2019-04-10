@@ -1,6 +1,6 @@
 <?php require_once("../includes/data/header_nav.php"); ?>
 
-<body onload="load_k(<?php echo $_GET['data']; ?>);lo_uloge();">
+<body onload="load_k(<?php echo $_GET['data']; ?>);">
 
 
 <!-- Navbar-->
@@ -95,7 +95,6 @@
 
       <script src="js/load_korisnik_id.js"></script>
       <script src="js/update_korisnik.js"></script>
-      <script src="js/load_uloge.js"></script>
 
 
   <?php require_once("../includes/data/footer.php"); ?>

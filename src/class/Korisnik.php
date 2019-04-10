@@ -248,7 +248,8 @@ public function return_korisnik_id($sifra){
         korisnicko_ime,
         email,
         sifra,
-        pol
+        pol,
+        sifra_uloge
         FROM korisnik 
         WHERE sifra_korisnika = $sifra");
 
