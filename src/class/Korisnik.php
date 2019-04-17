@@ -129,7 +129,7 @@ public function set_korisnik($ime, $prezime, $slika, $datum_rodjenja, $korisnick
 
 public function insert_korisnik(){
 
-    $hash_sifra = password_hash($this->sifra, PASSWORD_DEFAULT);
+    $hash_sifra = password_hash($this->sifra, PASSWORD_ARGON2I);
 
     $insert_query = $this->prepare_query("INSERT INTO korisnik(
         ime,

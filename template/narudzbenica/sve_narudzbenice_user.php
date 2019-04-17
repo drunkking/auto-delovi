@@ -64,7 +64,6 @@
                           <th>Šifra</th>
                           <th>Datum naručivanja</th>
                           <th>Stavka narudzbenice</th>
-                          <th>Obriši</th>
                         </tr>
                       </thead>
                       <tbody id="tb_n">
@@ -84,6 +83,7 @@
   <script src="js/load_narudzbenica_user.js"></script>
   <script src="js/load_stavka_narudzbenice.js"></script>
   <script src="js/odobri_narudzbenicu.js"></script>
+  <script src="js/delete_narudzbenica.js"></script>
 
   <!-- Stavka  Modal -->
 <div class="modal fade" id="StavkaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

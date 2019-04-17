@@ -1,6 +1,8 @@
 
 function submit_proizvod(){
 
+   
+
     var naziv = document.getElementById("naziv_p").value;
 
     var proizvodjac = document.getElementById("proizvodjac_p").value;
@@ -16,35 +18,38 @@ function submit_proizvod(){
     var stanje = document.getElementById("stanje_p").value;
 
 
-    var proizvod_obj = {
-        "naziv": naziv,
-        "proizvodjac": proizvodjac,
-        "slika": slika,
-        "za_vozila": za_vozila,
-        "cena": cena,
-        "sifra_kategorije": sif_kategorije,
-        "stanje": stanje
-    };
 
-   
-
-    xmlhttp = new XMLHttpRequest();
-    proizvod_obj_json = JSON.stringify(proizvod_obj);
+        var proizvod_obj = {
+            "naziv": naziv,
+            "proizvodjac": proizvodjac,
+            "slika": slika,
+            "za_vozila": za_vozila,
+            "cena": cena,
+            "sifra_kategorije": sif_kategorije,
+            "stanje": stanje
+        };
 
     
-    xmlhttp.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
-            
-            
-            console.log(this.responseText);
-            
-        }
-    };
-    
 
-    xmlhttp.open("POST","../../src/includes/ubaci_proizvod.php", true);
-    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send("proizvod="+proizvod_obj_json);
+        xmlhttp = new XMLHttpRequest();
+        proizvod_obj_json = JSON.stringify(proizvod_obj);
+
+        
+        xmlhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                
+                
+                console.log(this.responseText);
+                
+            }
+        };
+        
+
+        xmlhttp.open("POST","../../src/includes/ubaci_proizvod.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("proizvod="+proizvod_obj_json);
+
+    
 }
 
 

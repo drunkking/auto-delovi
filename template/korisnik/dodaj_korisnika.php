@@ -25,37 +25,37 @@
 
                         <div class="form-group">
                             <br>
-                            <input type="text" class="form-control" id="ime_k" placeholder="Ime">
+                            <input type="text" class="form-control" id="ime_k" placeholder="Ime"  required>
                         </div>
 
                         <div class="form-group">
                             <br>
-                            <input type="text" class="form-control" id="prezime_k" placeholder="Prezime">
+                            <input type="text" class="form-control" id="prezime_k" placeholder="Prezime"  required>
                         </div>
 
                         <div class="form-group">
                             <br>
-                            <input type="file" class="form-control-file" name="slika_k" id="slika_k">
+                            <input type="file" class="form-control-file" name="slika_k" id="slika_k"  required>
                         </div>
 
                         <div class="form-group" id="kat">
                             <h5>Datum rodjenja</h5>
-                            <input type="date" class="form-control" id="datum_rodj_k" placeholder="Datum rodjenja">
+                            <input type="date" class="form-control" id="datum_rodj_k" placeholder="Datum rodjenja"  required>
                         </div>
 
                         <div class="form-group">
                             <br>
-                            <input type="text" class="form-control" id="korisnicko_k" placeholder="Korisničko ime">
+                            <input type="text" class="form-control" id="korisnicko_k" placeholder="Korisničko ime"  required>
                         </div>
 
                         <div class="form-group">
                             <br>
-                            <input type="email" class="form-control" id="adresa_k" placeholder="Email">
+                            <input type="email" class="form-control" id="adresa_k" placeholder="Email"  required>
                         </div>
 
                         <div class="form-group">
                             <br>
-                            <input type="password" class="form-control" id="sifra_k" placeholder="Šifra">
+                            <input type="password" class="form-control" id="sifra_k" placeholder="Šifra"  required> 
                         </div>
 
                         <div class="form-group" id="kat">

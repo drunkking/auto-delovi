@@ -25,7 +25,7 @@
                         
                         <div class="form-group">
                             <br>
-                            <input type="text" class="form-control" id="naziv_u" placeholder="Naziv">
+                            <input type="text" class="form-control" id="naziv_u" placeholder="Naziv"  required>
                         </div>
                
 
