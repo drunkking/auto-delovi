@@ -78,11 +78,7 @@
         </div>
 
 
-        <!-- Profil-->
-        <div class="dropdown">
-          <a class="list-group-item list-group-item-action bg-light"  href="../profil/profil.php?prof=<?php echo $_SESSION['spec'];?>"  id="dropdownMenu">
-          <i class="fas fa-address-card"></i> Profil</a>
-        </div>
+
         
       </div>
     </div>

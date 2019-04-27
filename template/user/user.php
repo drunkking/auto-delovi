@@ -56,14 +56,7 @@
         </div>
       
 
-        <!-- Profil-->
-        <div class="dropdown">
-        <a class="list-group-item list-group-item-action bg-light" href="#" id="dropdownMenu"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-address-card"></i> Profil
-        
-        </a>
-        
-        </div>
+     
         
       </div>
     </div>

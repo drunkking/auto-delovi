@@ -38,7 +38,7 @@
 
             <div class="jumbotron jumbotron-fluid mt-4">
               <div class="container" >
-                <h1 class="display-4">Munja trans</h1>
+                <h1 class="display-4">Prodavnica auto delova</h1>
                 <p class="lead" style="text-align:left;">
                 There are many variations of passages of Lorem Ipsum available, 
                 but the majority have suffered alteration in some form, by injected humour, 

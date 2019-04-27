@@ -48,6 +48,7 @@ CREATE TABLE narudzbenica (
     sifra_narudzbenice INTEGER NOT NULL AUTO_INCREMENT,
     sifra_interna INTEGER NOT NULL,
     datum_narucivanja DATE NOT NULL,
+    stat INTEGER,
     sifra_korisnika INTEGER,
     PRIMARY KEY(sifra_narudzbenice),
     FOREIGN KEY(sifra_korisnika) REFERENCES korisnik(sifra_korisnika)

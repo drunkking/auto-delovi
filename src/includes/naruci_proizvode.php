@@ -17,6 +17,8 @@ header("Content-Type: application/json; charset=UTF-8");
 if(!empty($_POST["proizvod"])){
 
     $kolica = json_decode($_POST["proizvod"], false);
+
+    
     
     /** SKIDANJE ZAGRADA */
     $kol = str_replace('[','', $kolica);
@@ -68,7 +70,7 @@ if(!empty($_POST["proizvod"])){
     }
 
  
-
+ 
 
     $today = date("Y-m-d");
     $narudz = new Narudzbenica();

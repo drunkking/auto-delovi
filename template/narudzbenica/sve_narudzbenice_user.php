@@ -56,7 +56,7 @@
         <div class="container-fluid">
         <div class="row justify-content-center">
                 <div class="col-lg-12">
-                    <h1 class="pt-4 text-center">Sve narudzbenice</h1>
+                    <h1 class="pt-4 text-center">Narudzbenice na čekanju</h1>
 
                     <table class="table table-hover text-center">
                       <thead>
